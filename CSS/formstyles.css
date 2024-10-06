@@ -1,0 +1,42 @@
+body{
+    background-color: rgba(18, 180, 202, 0.555); /*color de fondo del cuerpo*/
+}
+table {
+    height: 900px; /*La tabla ocupa 900 pixeles de alto*/
+    width: 800px; /* La tabla ocupa 800 pixeles de ancho*/
+    border-collapse: collapse; /* Elimina los bordes duplicados */
+    background-color: rgba(189, 189, 189, 0.836); /*color de fondo*/
+    color: rgb(17, 17, 17); /*color de letras*/
+    margin: auto; /*centrar la tabla equiparando sus margenes*/
+    margin-top: 20px; /*espacio en el margen superior*/
+    margin-bottom: 20px; /*espacio en el margen inferior*/
+    box-shadow: 2px 5px 30px rgb(255, 255, 255); /*sombra de la tabla*/
+}
+table, th, td { /*agrupa los distintos grupos con una coma*/
+    border: 1px solid #eef; /* Borde negro para la tabla y celdas */
+}
+td:first-child{
+    width: 400px; /*se refiere al primer hijo de la tabla  */
+}
+td:last-child{
+    width: 400px; /*se refiere al ultimo hijo de la tabla */
+}
+th, td {
+    margin: 5px;
+    padding: 10px; /* Espaciado interno en celdas */
+    text-align: left; /* Alineación del texto al centro */
+}
+::placeholder{
+    color: rgba(58, 57, 57, 0.692);
+}
+th {
+    text-align: center; /* Alineación del texto en encabezados al centro */
+    font-family: 'Times New Roman', Times, serif /*tipografia*/
+}
+#otroMedio {
+    display: none; /* Ocultar el campo "Otro medio" por defecto */
+}
+h1{
+    font-size: 20px; /*tamaño de la letra*/
+    font-family: Georgia, 'Times New Roman', Times, serif; /*tipografia*/
+}
