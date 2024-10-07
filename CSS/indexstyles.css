@@ -1,104 +1,108 @@
 /* Estilo general */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: Arial, sans-serif; /* Fuente general de la página */
+    margin: 0; /* Eliminar margen por defecto */
+    padding: 0; /* Eliminar padding por defecto */
+    background-color: #f4f4f4; /* Color de fondo de la página */
+    color: #333; /* Color del texto */
 }
 
 /* Encabezado */
 header {
-    background-color: #0073e6;
-    color: white;
-    padding: 20px;
-    text-align: center;
+    background-color: #0073e6; /* Color de fondo del encabezado */
+    color: white; /* Color del texto en el encabezado */
+    padding: 20px; /* Espaciado interno del encabezado */
+    text-align: center; /* Centrar el texto en el encabezado */
 }
 
 header h1 {
-    margin: 0;
+    margin: 0; /* Eliminar margen del título */
 }
 
+/* Navegación */
 nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+    list-style: none; /* Eliminar estilo de lista */
+    padding: 0; /* Eliminar padding de la lista */
+    margin: 0; /* Eliminar margen de la lista */
+    display: flex; /* Mostrar elementos de lista en fila */
+    justify-content: center; /* Centrar los elementos de la lista */
+    gap: 20px; /* Espaciado entre los elementos de la lista */
 }
 
 nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+    color: white; /* Color del texto de los enlaces */
+    text-decoration: none; /* Eliminar subrayado de los enlaces */
+    font-weight: bold; /* Negrita para los enlaces */
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Subrayar enlace al pasar el ratón */
 }
 
 /* Categorías (lista desplegable) */
 #categorias {
-    margin-top: 15px;
-    padding: 10px;
-    border: 2px solid #0073e6;
-    border-radius: 5px;
-    background-color: white;
-    color: #333;
-    font-weight: bold;
+    margin-top: 15px; /* Margen superior para el desplegable */
+    padding: 10px; /* Espaciado interno */
+    border: 2px solid #0073e6; /* Borde de color para el desplegable */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: white; /* Color de fondo del desplegable */
+    color: #333; /* Color del texto en el desplegable */
+    font-weight: bold; /* Negrita para el texto del desplegable */
 }
 
 /* Sección de productos */
 main {
-    padding: 20px;
+    padding: 20px; /* Espaciado interno para el contenido principal */
 }
 
 table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
+    width: 700px; /* Ancho fijo para la tabla */
+    border-collapse: collapse; /* Colapsar bordes de la tabla */
+    margin: 20px auto; /* Centrar la tabla horizontalmente */
 }
 
 table th, table td {
-    border: 1px solid #ddd;
-    padding: 12px;
-    text-align: center;
+    border: 1px solid #ddd; /* Bordes para las celdas */
+    padding: 12px; /* Espaciado interno de las celdas */
+    text-align: center; /* Alineación del texto en las celdas */
 }
 
 table th {
-    background-color: #0073e6;
-    color: white;
+    background-color: #0073e6; /* Color de fondo para los encabezados de la tabla */
+    color: white; /* Color del texto en los encabezados de la tabla */
 }
 
 table tbody tr:nth-child(even) {
-    background-color: #f9f9f9;
+    background-color: #f9f9f9; /* Color de fondo alternativo para filas pares */
 }
 
 table img {
-    max-width: 100px;
+    width: 75px; /* Ancho fijo para las imágenes en la tabla */
+    height: 75px; /* Alto fijo para las imágenes en la tabla */
+    object-fit: cover; /* Ajuste de la imagen sin distorsión */
 }
 
+/* Botones */
 button {
-    padding: 10px 20px;
-    background-color: #0073e6;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    padding: 10px 20px; /* Espaciado interno del botón */
+    background-color: #0073e6; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados para el botón */
+    cursor: pointer; /* Cambiar cursor al pasar el ratón sobre el botón */
 }
 
 button:hover {
-    background-color: #005bb5;
+    background-color: #005bb5; /* Color de fondo al pasar el ratón sobre el botón */
 }
 
 /* Pie de página */
 footer {
-    background-color: #0073e6;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    background-color: #0073e6; /* Color de fondo del pie de página */
+    color: white; /* Color del texto en el pie de página */
+    text-align: center; /* Centrar el texto en el pie de página */
+    padding: 10px; /* Espaciado interno del pie de página */
+    position: fixed; /* Fijar el pie de página en la parte inferior */
+    width: 100%; /* Ancho completo del pie de página */
+    bottom: 0; /* Posicionar en la parte inferior */
 }
