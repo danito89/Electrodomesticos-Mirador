@@ -1,111 +1,115 @@
-/* Estilo general */
+/* Estilo general para la página */
 body {
-    font-family: Arial, sans-serif; /* Fuente general de la página */
-    margin: 0; /* Eliminar margen por defecto */
-    padding: 0; /* Eliminar padding por defecto */
-    background-color: #f4f4f4; /* Color de fondo de la página */
-    color: #333; /* Color del texto */
+    font-family: Arial, sans-serif; /* Fuente general */
+    margin: 0; /* Sin margen */
+    padding: 0; /* Sin padding */
+    background-color: #f4f4f4; /* Color de fondo */
+    color: #333; /* Color de texto */
 }
 
-/* Encabezado */
+/* Estilo del encabezado */
 header {
-    background-color: #0073e6; /* Color de fondo del encabezado */
-    color: white; /* Color del texto en el encabezado */
-    padding: 20px; /* Espaciado interno del encabezado */
-    text-align: center; /* Centrar el texto en el encabezado */
-    background-image: url(https://www.shutterstock.com/image-vector/abstract-background-image-global-online-260nw-2322088941.jpg);
+    background-color: #0073e6; /* Fondo azul */
+    color: white; /* Texto blanco */
+    padding: 20px; /* Espaciado interno */
+    text-align: center; /* Centrado */
+    background-image: url(...); /* Imagen de fondo */
 }
 
 header h1 {
-    margin: 0; /* Eliminar margen del título */
+    margin: 0; /* Sin margen en el título */
 }
 
-/* Navegación */
+/* Estilos para la navegación */
 nav ul {
-    list-style: none; /* Eliminar estilo de lista */
-    padding: 0; /* Eliminar padding de la lista */
-    margin: 0; /* Eliminar margen de la lista */
-    display: flex; /* Mostrar elementos de lista en fila */
-    justify-content: center; /* Centrar los elementos de la lista */
-    gap: 20px; /* Espaciado entre los elementos de la lista */
+    list-style: none; /* Sin viñetas */
+    display: flex; /* Elementos en fila */
+    justify-content: center; /* Centrado */
+    gap: 20px; /* Espacio entre enlaces */
 }
 
 nav ul li a {
-    color: white; /* Color del texto de los enlaces */
-    text-decoration: none; /* Eliminar subrayado de los enlaces */
-    font-weight: bold; /* Negrita para los enlaces */
+    color: white; /* Texto blanco */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: bold; /* Negrita */
 }
 
 nav ul li a:hover {
-    text-decoration: underline; /* Subrayar enlace al pasar el ratón */
+    text-decoration: underline; /* Subrayado al pasar */
 }
 
-/* Categorías (lista desplegable) */
+/* Estilo del select de categorías */
 #categorias {
-    margin-top: 15px; /* Margen superior para el desplegable */
-    padding: 10px; /* Espaciado interno */
-    border: 2px solid #0073e6; /* Borde de color para el desplegable */
+    margin-top: 15px; /* Espacio superior */
+    padding: 10px; /* Padding interno */
+    border: 2px solid #0073e6; /* Borde azul */
     border-radius: 5px; /* Bordes redondeados */
-    background-color: white; /* Color de fondo del desplegable */
-    color: #333; /* Color del texto en el desplegable */
-    font-weight: bold; /* Negrita para el texto del desplegable */
+    background-color: white; /* Fondo blanco */
+    color: #333; /* Texto gris oscuro */
+    font-weight: bold; /* Negrita */
 }
 
 /* Sección de productos */
 main {
-    padding: 20px; /* Espaciado interno para el contenido principal */
-    justify-content: left;
+    padding: 20px; /* Espaciado general */
 }
 
 table {
-    width: 700px; /* Ancho fijo para la tabla */
-    border-collapse: collapse; /* Colapsar bordes de la tabla */
-    justify-content: left; /* Centrar la tabla horizontalmente */
-    
+    width: 700px; /* Ancho fijo */
+    border-collapse: collapse; /* Colapsar bordes */
 }
 
 table th, table td {
-    border: 1px solid #ddd; /* Bordes para las celdas */
-    padding: 12px; /* Espaciado interno de las celdas */
-    text-align: center; /* Alineación del texto en las celdas */
+    border: 1px solid #ddd; /* Bordes de celdas */
+    padding: 12px; /* Padding en celdas */
+    text-align: center; /* Texto centrado */
 }
 
 table th {
-    background-color: #0073e6; /* Color de fondo para los encabezados de la tabla */
-    color: white; /* Color del texto en los encabezados de la tabla */
+    background-color: #0073e6; /* Fondo azul en encabezados */
+    color: white; /* Texto blanco */
 }
 
 table tbody tr:nth-child(even) {
-    background-color: #f9f9f9; /* Color de fondo alternativo para filas pares */
+    background-color: #f9f9f9; /* Fondo alternado para filas */
 }
 
 table img {
-    width: 75px; /* Ancho fijo para las imágenes en la tabla */
-    height: 75px; /* Alto fijo para las imágenes en la tabla */
-    object-fit: cover; /* Ajuste de la imagen sin distorsión */
+    width: 75px; /* Ancho imágenes */
+    height: 75px; /* Alto imágenes */
+    object-fit: cover; /* Ajuste de imagen */
 }
 
-/* Botones */
+/* Estilo de botones */
 button {
-    padding: 10px 20px; /* Espaciado interno del botón */
-    background-color: #0073e6; /* Color de fondo del botón */
-    color: white; /* Color del texto del botón */
-    border: none; /* Sin borde */
-    border-radius: 5px; /* Bordes redondeados para el botón */
-    cursor: pointer; /* Cambiar cursor al pasar el ratón sobre el botón */
+    padding: 10px 20px; /* Padding del botón */
+    background-color: #0073e6; /* Fondo azul */
+    color: white; /* Texto blanco */
+    border: none; /* Sin bordes */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar cursor */
 }
 
 button:hover {
-    background-color: #005bb5; /* Color de fondo al pasar el ratón sobre el botón */
+    background-color: #005bb5; /* Fondo más oscuro al pasar */
 }
 
-/* Pie de página */
+/* Estilo del pie de página */
 footer {
-    background-color: #0073e6; /* Color de fondo del pie de página */
-    color: white; /* Color del texto en el pie de página */
-    text-align: center; /* Centrar el texto en el pie de página */
-    padding: 10px; /* Espaciado interno del pie de página */
-    position: scroll; /* Fijar el pie de página en la parte inferior */
-    width: 100%; /* Ancho completo del pie de página */
-    bottom: 0; /* Posicionar en la parte inferior */
+    background-color: #0073e6; /* Fondo azul */
+    color: white; /* Texto blanco */
+    text-align: center; /* Texto centrado */
+    padding: 10px; /* Espaciado */
+    width: 100%; /* Ancho completo */
 }
+
+/* Estilos responsivos para pantallas más pequeñas */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 24px; /* Fuente más pequeña en móviles */
+    }
+    nav ul {
+        flex-direction: column; /* Navegación vertical */
+    }
+}
+
