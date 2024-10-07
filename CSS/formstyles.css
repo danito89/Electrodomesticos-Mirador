@@ -2,7 +2,7 @@ body{
     background-color: rgba(18, 180, 202, 0.555); /*color de fondo del cuerpo*/
 }
 table {
-    height: 900px; /*La tabla ocupa 900 pixeles de alto*/
+    height: 700px; /*La tabla ocupa 900 pixeles de alto*/
     width: 800px; /* La tabla ocupa 800 pixeles de ancho*/
     border-collapse: collapse; /* Elimina los bordes duplicados */
     background-color: rgba(189, 189, 189, 0.836); /*color de fondo*/
