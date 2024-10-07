@@ -13,6 +13,7 @@ header {
     color: white; /* Color del texto en el encabezado */
     padding: 20px; /* Espaciado interno del encabezado */
     text-align: center; /* Centrar el texto en el encabezado */
+    background-image: url(https://www.shutterstock.com/image-vector/abstract-background-image-global-online-260nw-2322088941.jpg);
 }
 
 header h1 {
