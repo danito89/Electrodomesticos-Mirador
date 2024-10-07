@@ -54,12 +54,14 @@ nav ul li a:hover {
 /* Sección de productos */
 main {
     padding: 20px; /* Espaciado interno para el contenido principal */
+    justify-content: left;
 }
 
 table {
     width: 700px; /* Ancho fijo para la tabla */
     border-collapse: collapse; /* Colapsar bordes de la tabla */
-    margin: 20px auto; /* Centrar la tabla horizontalmente */
+    justify-content: left; /* Centrar la tabla horizontalmente */
+    
 }
 
 table th, table td {
