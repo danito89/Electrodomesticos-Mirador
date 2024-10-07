@@ -118,3 +118,64 @@ footer {
     }
 }
 
+#conteItemsCarrusel{
+    height: 200px;
+    overflow: hidden;
+}
+.itemCarrusel{
+    height: 100%;
+    position: relative;
+}
+
+.tarjetaCarrusel{
+    height: 100%;
+}
+
+.flechasCarrusel{
+    
+    height: 100%;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+#tarjetaCarrusel1{
+    background-color: rgb(240, 137, 240);
+
+}
+
+#tarjetaCarrusel2{
+    background-color: rgb(109, 87, 231);
+
+}
+
+#tarjetaCarrusel3{
+    background-color: rgb(80, 199, 110);
+
+}
+
+a{
+    text-decoration: none;
+}
+
+i{
+    color: white;
+}
+
+#contePuntos{
+    display: flex;
+    justify-content: space-around;
+}
+
+#contePuntos > a {
+    font-size: 1.5em;
+    font-style: none;
+    color: black;
+
+
+}

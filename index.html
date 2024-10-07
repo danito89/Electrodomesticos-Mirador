@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura el viewport para diseño responsivo -->
     <title>Tienda Virtual Electrodomésticos Mirador</title> <!-- Título de la página -->
     <link rel="stylesheet" href="indexstyles.css"> <!-- Enlaza el archivo CSS para estilos -->
+    <script src="https://kit.fontawesome.com/ebd08e62ef.js" crossorigin="anonymous"></script>
+</head>
    
 <body>
     <header>
@@ -100,25 +102,55 @@
                         </tbody>
                     </table>
                 </div>
-
-                <!-- Segunda tabla -->
-                <div class="col-md-6 col-12">
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th colspan="2">CARROUSEL</th>
-                            </tr>
-                            <tr>
-                                <td>Hola</td> <!-- Celda que abarca varias filas -->
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- Celdas adicionales pueden añadirse aquí -->
-                        </tbody>
-                    </table>
-                </div>
             </div>
         </section>
+        <div id="conteItemsCarrusel">
+            <div class="itemCarrusel" id="itemCarrusel1" >
+                <div class="tarjetaCarrusel"id="tarjetaCarrusel1">
+                    A
+                </div>
+                <div class="flechasCarrusel">
+                    <a href="#itemCarrusel3">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </a>
+                    <a href="#itemCarrusel2">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="itemCarrusel" id="itemCarrusel2" >
+                <div class="tarjetaCarrusel" id="tarjetaCarrusel2">
+                    B
+                </div>
+                <div class="flechasCarrusel">
+                    <a href="#itemCarrusel1">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </a>
+                    <a href="#itemCarrusel3">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="itemCarrusel" id="itemCarrusel3">
+                <div class="tarjetaCarrusel" id="tarjetaCarrusel3">
+                    C
+                </div>
+                <div class="flechasCarrusel">
+                    <a href="#itemCarrusel2">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </a>
+                    <a href="#itemCarrusel1">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="contePuntos">
+            <a href="#itemCarrusel1">*</a>
+            <a href="#itemCarrusel2">*</a>
+            <a href="#itemCarrusel3">*</a>
+
+        </div>
     </main>
 
     <footer class="text-center my-4">
