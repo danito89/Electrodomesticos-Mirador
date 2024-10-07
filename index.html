@@ -22,8 +22,7 @@
                         var options = "width=600,height=400,left=100,top=100"; // Ajusta el tamaño y posición según lo necesites
                         window.open(url, '_blank', options); // Abre la nueva ventana
                     }
-                </script>
-                
+                </script>              
             </ul>
         </nav>
         <select name="categorias" id="categorias"> <!-- Menú desplegable de categorías -->
@@ -43,58 +42,77 @@
     <main>
         <section id="productos"> <!-- Sección de productos destacados -->
              <!-- Título de la sección -->
-            <table> <!-- Tabla para mostrar los productos -->
-                <thead>
-                    <tr>
-                        <th colspan="5">Productos Destacados</th>
-                    </tr>
-                    <tr>
-                        <td>Imagen</td> <!-- Columna para la imagen del producto -->
-                        <td>Nombre del Producto</td> <!-- Columna para el nombre del producto -->
-                        <td>Descripción</td> <!-- Columna para la descripción del producto -->
-                        <td>Precio</td> <!-- Columna para el precio del producto -->
-                        <td>Acciones</td> <!-- Columna para las acciones (botones) -->
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><img src="IMAGES/PRODUCTOS/producto1.jpg" alt="Producto 1"></td> <!-- Imagen del producto 1 -->
-                        <td>Producto 1</td> <!-- Nombre del producto 1 -->
-                        <td>Descripción breve del producto.</td> <!-- Descripción del producto 1 -->
-                        <td>$XX.XX</td> <!-- Precio del producto 1 -->
-                        <td><button>Añadir al Carrito</button></td> <!-- Botón para añadir al carrito -->
-                    </tr>
-                    <tr>
-                        <td><img src="IMAGES/PRODUCTOS/producto2.jpg" alt="Producto 2"></td> <!-- Imagen del producto 2 -->
-                        <td>Producto 2</td> <!-- Nombre del producto 2 -->
-                        <td>Descripción breve del producto.</td> <!-- Descripción del producto 2 -->
-                        <td>$XX.XX</td> <!-- Precio del producto 2 -->
-                        <td><button>Añadir al Carrito</button></td> <!-- Botón para añadir al carrito -->
-                    </tr>
-                    <tr>
-                        <td><img src="IMAGES/PRODUCTOS/producto3.jpg" alt="Producto 3"></td> <!-- Imagen del producto 3 -->
-                        <td>Producto 3</td> <!-- Nombre del producto 3 -->
-                        <td>Descripción breve del producto.</td> <!-- Descripción del producto 3 -->
-                        <td>$XX.XX</td> <!-- Precio del producto 3 -->
-                        <td><button>Añadir al Carrito</button></td> <!-- Botón para añadir al carrito -->
-                    </tr>
-                    <tr>
-                        <td><img src="IMAGES/PRODUCTOS/producto4.jpg" alt="Producto 4"></td> <!-- Imagen del producto 4 -->
-                        <td>Producto 4</td> <!-- Nombre del producto 4 -->
-                        <td>Descripción breve del producto.</td> <!-- Descripción del producto 4 -->
-                        <td>$XX.XX</td> <!-- Precio del producto 4 -->
-                        <td><button>Añadir al Carrito</button></td> <!-- Botón para añadir al carrito -->
-                    </tr>
-                    <tr>
-                        <td><img src="IMAGES/PRODUCTOS/producto5.jpg" alt="Producto 5"></td> <!-- Imagen del producto 5 -->
-                        <td>Producto 5</td> <!-- Nombre del producto 5 -->
-                        <td>Descripción breve del producto.</td> <!-- Descripción del producto 5 -->
-                        <td>$XX.XX</td> <!-- Precio del producto 5 -->
-                        <td><button>Añadir al Carrito</button></td> <!-- Botón para añadir al carrito -->
-                    </tr>
-                    <!-- Más productos aquí --> <!-- Comentario para indicar que se pueden añadir más productos -->
-                </tbody>
-            </table>
+<!-- Contenedor para la primera tabla -->
+<div style="display: inline-block; vertical-align: top;"> <!-- gpt: Usamos inline-block para mostrar tablas una al lado de otra -->
+    <table>
+        <thead>
+            <tr>
+                <th colspan="5">Productos Destacados</th>
+            </tr>
+            <tr>
+                <td>Imagen</td>
+                <td>Nombre del Producto</td>
+                <td>Descripción</td>
+                <td>Precio</td>
+                <td>Acciones</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img src="IMAGES/PRODUCTOS/producto1.jpg" alt="Producto 1"></td>
+                <td>Producto 1</td>
+                <td>Descripción breve del producto.</td>
+                <td>$XX.XX</td>
+                <td><button>Añadir al Carrito</button></td>
+            </tr>
+            <tr>
+                <td><img src="IMAGES/PRODUCTOS/producto2.jpg" alt="Producto 2"></td>
+                <td>Producto 2</td>
+                <td>Descripción breve del producto.</td>
+                <td>$XX.XX</td>
+                <td><button>Añadir al Carrito</button></td>
+            </tr>
+            <tr>
+                <td><img src="IMAGES/PRODUCTOS/producto3.jpg" alt="Producto 3"></td>
+                <td>Producto 3</td>
+                <td>Descripción breve del producto.</td>
+                <td>$XX.XX</td>
+                <td><button>Añadir al Carrito</button></td>
+            </tr>
+            <tr>
+                <td><img src="IMAGES/PRODUCTOS/producto4.jpg" alt="Producto 4"></td>
+                <td>Producto 4</td>
+                <td>Descripción breve del producto.</td>
+                <td>$XX.XX</td>
+                <td><button>Añadir al Carrito</button></td>
+            </tr>
+            <tr>
+                <td><img src="IMAGES/PRODUCTOS/producto5.jpg" alt="Producto 5"></td>
+                <td>Producto 5</td>
+                <td>Descripción breve del producto.</td>
+                <td>$XX.XX</td>
+                <td><button>Añadir al Carrito</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- Contenedor para la segunda tabla, con margen entre las tablas -->
+<div style="display: inline-block; vertical-align: top; margin-left: 20px;"> <!-- gpt: Añadimos margen entre las tablas -->
+    <table>
+        <thead>
+            <tr>
+                <th colspan="2">CARROUSEL</th>
+            </tr>
+            <tr>
+                <TD colspan="2"> hola
+                    <TD rowspan="5"> hola
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+            
         </section>
     </main>
     <footer>
