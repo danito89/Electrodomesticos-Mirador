@@ -15,7 +15,15 @@
                 <li><a href="#productos">Productos</a></li>
                 <li><a href="#contacto">Contacto</a></li>
                 <li><a href="#about">Acerca de</a></li>
-                <li><a href="formulario.html">Encuesta</a></li>
+                <li><a href="formulario.html" onclick="openPopup('formulario.html'); return false;">Encuesta</a></li>
+                <script>
+                    function openPopup(url) {
+                        // Configuración de la ventana emergente
+                        var options = "width=600,height=400,left=100,top=100"; // Ajusta el tamaño y posición según lo necesites
+                        window.open(url, '_blank', options); // Abre la nueva ventana
+                    }
+                </script>
+                
             </ul>
         </nav>
         <select name="categorias" id="categorias"> <!-- Menú desplegable de categorías -->
