@@ -102,7 +102,7 @@ footer {
     color: white; /* Color del texto en el pie de página */
     text-align: center; /* Centrar el texto en el pie de página */
     padding: 10px; /* Espaciado interno del pie de página */
-    position: fixed; /* Fijar el pie de página en la parte inferior */
+    position: scroll; /* Fijar el pie de página en la parte inferior */
     width: 100%; /* Ancho completo del pie de página */
     bottom: 0; /* Posicionar en la parte inferior */
 }
