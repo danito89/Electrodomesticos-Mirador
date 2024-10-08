@@ -1,19 +1,25 @@
-<!DOCTYPE html> <!-- Define el tipo de documento como HTML5 -->
-<html lang="es"> <!-- Establece el idioma del contenido como español -->
+<!DOCTYPE html>
+<html lang="es">
 <head>
-    <meta charset="UTF-8"> <!-- Establece la codificación de caracteres a UTF-8 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura el viewport para diseño responsivo -->
-    <title>Tienda Virtual Electrodomésticos Mirador</title> <!-- Título de la página -->
-    <link rel="stylesheet" href="indexstyles.css"> <!-- Enlaza el archivo CSS para estilos -->
+    <!-- Configuración básica del documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Virtual Electrodomésticos Mirador</title>
+    <link rel="stylesheet" href="indexstyles.css">
     <script src="https://kit.fontawesome.com/ebd08e62ef.js" crossorigin="anonymous"></script>
+    <style>
+        .hidden { display: none; } /* Clase para ocultar secciones */
+    </style>
 </head>
    
 <body>
+    <!-- Inicio del encabezado -->
     <header>
         <div class="container">
-            <h1 class="text-center">Electrodomésticos Mirador</h1> <!-- Título principal de la tienda -->
-            <nav class="navbar navbar-expand-lg navbar-light bg-light"> <!-- Navegación principal -->
+            <h1 class="text-center">Electrodomésticos Mirador</h1>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
+                    <!-- Menú de navegación -->
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item"><a class="nav-link" href="#home">Inicio</a></li>
                         <li class="nav-item"><a class="nav-link" href="#productos">Productos</a></li>
@@ -21,13 +27,15 @@
                         <li class="nav-item"><a class="nav-link" href="#about">Acerca de</a></li>
                         <li class="nav-item"><a class="nav-link" href="formulario.html" onclick="openPopup('formulario.html'); return false;">Encuesta</a></li>
                     </ul>
+                    <!-- Función JavaScript para abrir un popup -->
                     <script>
                         function openPopup(url) {
                             var options = "width=600,height=400,left=100,top=100";
-                            window.open(url, '_blank', options); // Abre la nueva ventana
+                            window.open(url, '_blank', options);
                         }
                     </script>
-                    <select class="form-select" name="categorias" id="categorias"> <!-- Menú desplegable de categorías -->
+                    <!-- Selección de categorías -->
+                    <select class="form-select" name="categorias" id="categorias">
                         <option value="categorias">CATEGORIAS</option>
                         <option value="celulares">CELULARES</option>
                         <option value="iluminacion">ILUMINACION</option>
@@ -44,11 +52,13 @@
             </nav>
         </div>
     </header>
+    <!-- Fin del encabezado -->
 
+    <!-- Inicio del contenido principal -->
     <main>
-        <section id="productos" class="container my-4"> <!-- Sección de productos destacados -->
+        <!-- Sección de productos destacados -->
+        <section id="productos" class="container my-4">
             <div class="row">
-                <!-- Primera tabla -->
                 <div class="col-md-6 col-12">
                     <table class="table table-striped">
                         <thead>
@@ -64,6 +74,7 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <!-- Lista de productos -->
                             <tr>
                                 <td><img src="IMAGES/PRODUCTOS/producto1.jpg" alt="Producto 1" class="img-fluid"></td>
                                 <td>Producto 1</td>
@@ -99,16 +110,65 @@
                                 <td>$XX.XX</td>
                                 <td><button class="btn btn-primary">Añadir al Carrito</button></td>
                             </tr>
+                            <!-- Fin de la lista de productos -->
                         </tbody>
                     </table>
                 </div>
             </div>
         </section>
+        <!-- Fin de la sección de productos destacados -->
+
+        <!-- Secciones para cada categoría -->
+        <section id="celulares" class="hidden">
+            <h2>Celulares</h2>
+            <p>EN CONSTRUCCION</p>
+        </section>
+        <section id="iluminacion" class="hidden">
+            <h2>Iluminación</h2>
+            <p>EN CONSTRUCCION</p>
+        </section>
+        <section id="computacion" class="hidden">
+            <h2>Computación</h2>
+            <p>EN CONSTRUCCION</p>
+        </section>
+        <section id="consolas" class="hidden">
+            <h2>Consolas</h2>
+            <p>EN CONSTRUCCION</p>
+        </section>
+        <section id="smart-tv" class="hidden">
+            <h2>Smart TV</h2>
+            <p>EN CONSTRUCCION</p>
+        </section>
+        <section id="audio" class="hidden">
+            <h2>Audio</h2>
+            <p>EN CONSTRUCCION</p>
+        </section>
+        <section id="climatizacion" class="hidden">
+            <h2>Climatización</h2>
+            <p>EN CONSTRUCCION</p>
+        </section>
+        <section id="cocina" class="hidden">
+            <h2>Cocina</h2>
+            <p>EN CONSTRUCCION</p>
+        </section>
+        <section id="heladeras-frezzers" class="hidden">
+            <h2>Heladeras y Freezers</h2>
+            <p>EN CONSTRUCCION</p>
+        </section>
+        <section id="fotografia" class="hidden">
+            <h2>Fotografía</h2>
+            <p>EN CONSTRUCCION</p>
+        </section>
+        <!-- Fin de las secciones de categorías -->
+
+        <!-- Inicio del carrusel de imágenes -->
         <div id="conteItemsCarrusel">
-            <div class="itemCarrusel" id="itemCarrusel1" >
-                <div class="tarjetaCarrusel"id="tarjetaCarrusel1">
+            <!-- Primer elemento del carrusel -->
+            <div class="itemCarrusel" id="itemCarrusel1">
+                <div class="tarjetaCarrusel" id="tarjetaCarrusel1">
                     <img src="https://img.freepik.com/psd-gratis/logo-3d-render-super-oferta-composiciones-promocion_314999-1715.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1728259200&semt=ais_hybrid" alt="imagen1">
                 </div>
+                <!-- Flechas de navegación del carrusel -->
                 <div class="flechasCarrusel">
                     <a href="#itemCarrusel3">
                         <i class="fa-solid fa-chevron-left"></i>
@@ -118,7 +178,8 @@
                     </a>
                 </div>
             </div>
-            <div class="itemCarrusel" id="itemCarrusel2" >
+            <!-- Segundo elemento del carrusel -->
+            <div class="itemCarrusel" id="itemCarrusel2">
                 <div class="tarjetaCarrusel" id="tarjetaCarrusel2">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQaO1o-PK63SDfLkCNJHoLpqPdFLoO8XEk0w&s" alt="imagen2">
                 </div>
@@ -131,6 +192,7 @@
                     </a>
                 </div>
             </div>
+            <!-- Tercer elemento del carrusel -->
             <div class="itemCarrusel" id="itemCarrusel3">
                 <div class="tarjetaCarrusel" id="tarjetaCarrusel3">
                     <img src="https://blog.beep.es/wp-content/uploads/2022/06/electrodomesticos-verano.jpg" alt="imagen3">
@@ -144,30 +206,56 @@
                     </a>
                 </div>
             </div>
-            
         </div>
+        <!-- Puntos de navegación del carrusel -->
         <div id="contePuntos">
             <a href="#itemCarrusel1">*</a>
             <a href="#itemCarrusel2">*</a>
             <a href="#itemCarrusel3">*</a>
-
         </div>
+        <!-- Fin del carrusel de imágenes -->
         
     </main>
+    <!-- Fin del contenido principal -->
 
+    <!-- Inicio del pie de página -->
     <footer class="text-center my-4">
-        <div class="social-links mb-3"> <!-- Sección para enlaces de redes sociales -->
+        <div class="social-links mb-3">
             <h3>Síguenos en:</h3>
+            <!-- Enlaces a redes sociales -->
             <a href="https://www.facebook.com" target="_blank">Facebook</a> |
             <a href="https://www.instagram.com" target="_blank">Instagram</a> |
-            <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a> | <!-- Ajusta el número de WhatsApp -->
-            <a href="mailto:contacto@ejemplo.com">Contacto</a> <!-- Cambia a tu dirección de correo -->
+            <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a> |
+            <a href="mailto:contacto@ejemplo.com">Contacto</a>
         </div>
-        <div class="address mb-3"> <!-- Sección para dirección -->
+        <div class="address mb-3">
             <h3>Nuestra Dirección:</h3>
-            <p>Calle Ejemplo 123, Ciudad, País</p> <!-- Cambia esto a tu dirección real -->
+            <p>Calle Ejemplo 123, Ciudad, País</p>
         </div>
         <p>&copy; 2024 Electrodomésticos Mirador. Todos los derechos reservados.</p>
     </footer>
+    <!-- Fin del pie de página -->
+
+    <!-- Script para manejar el cambio de categorías -->
+    <script>
+        document.getElementById('categorias').addEventListener('change', function() {
+            const selectedValue = this.value;
+
+            // Ocultar todas las secciones
+            const sections = document.querySelectorAll('main > section');
+            sections.forEach(section => section.classList.add('hidden'));
+
+            // Mostrar la sección seleccionada o la de inicio
+            if (selectedValue === 'categorias') {
+                document.getElementById('productos').classList.remove('hidden');
+            } else {
+                const selectedSection = document.getElementById(selectedValue);
+                if (selectedSection) {
+                    selectedSection.classList.remove('hidden');
+                    selectedSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        });
+    </script>
 </body>
 </html>
