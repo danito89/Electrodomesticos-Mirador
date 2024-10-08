@@ -1,0 +1,267 @@
+header, section, footer {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Cabecera */
+header {
+    height: 150px;
+    background-color: grey;
+    background-image: url(imagenes/trees-3822149_640.jpg);
+}
+
+#nombrediv {
+    width: 700px;
+    height: 80px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+h1 {
+    letter-spacing: 2px;
+    color: white;
+    border-radius: 2px;
+}
+
+#botonera {
+    width: 400px;
+    height: 80px;
+    float: right;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+ul.btn_principal {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+}
+
+ul.btn_principal li {
+    flex-grow: 1;
+}
+
+ul.btn_principal li a {
+    display: block;
+    color: rgb(125, 241, 125);
+    padding: 30px;
+    background-color: rgb(48, 88, 32);
+    margin: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 15px;
+}
+
+ul.btn_principal li a:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Sección 1 */
+#sec1 {
+    height: 700px;
+    background-color: green;
+}
+
+#caja1 {
+    width: 200px;
+    height: 680px;
+    background-color: brown;
+    float: left;
+    margin: 10px;
+}
+
+#caja2 {
+    width: 200px;
+    height: 680px;
+    background-color: green;
+    float: right;
+    margin: 10px;
+}
+
+#caja3 {
+    width: 740px;
+    height: 330px;
+    background-color: blue;
+    float: left;
+    margin: 10px;
+}
+
+#caja4 {
+    width: 740px;
+    height: 330px;
+    background-color: yellow;
+    float: left;
+    clear: inherit;
+    margin: 10px;
+}
+
+#sec2 {
+    height: 600px;
+    background-color: grey;
+}
+
+.caja {
+    width: 370px;
+    height: 275px;
+    margin: 10px;
+    float: left;
+    background-color: brown;
+    padding: 5px;
+}
+
+.cajab {
+    width: 370px;
+    height: 275px;
+    background-color: yellow;
+    margin: 10px;
+    float: left;
+    padding: 5px;
+}
+
+#sec3 {
+    height: 700px;
+    background-color: green;
+}
+
+.cajas {
+    width: 375px;
+    height: 670px;
+    background-color: aqua;
+    float: left;
+    margin: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.cajas img {
+    width: 80%;
+    display: block;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: 0 0 15px black;
+}
+
+/* Pie de página */
+footer {
+    height: 100px;
+    background-color: yellow;
+}
+
+#botonera2 {
+    width: 1180px;
+    height: 80px;
+    background-color: blue;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+ul.btn_2 {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+}
+
+ul.btn_2 li {
+    flex-grow: 1;
+}
+
+ul.btn_2 li a {
+    display: block;
+    color: rgb(125, 241, 125);
+    padding: 25px;
+    background-color: rgb(48, 88, 32);
+    margin: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 15px;
+}
+
+/* Media Queries para pantallas de 600 a 1200px */
+@media all and (min-width: 600px) and (max-width: 1200px) {
+    header, section, footer {
+        width: 580px;
+    }
+
+    /* Cabecera */
+    header {
+        height: 200px;
+        background-image: url(imagenes/trees-3822149_640.jpg);
+    }
+
+    ul.btn_principal li a {
+        background-color: rgba(19, 20, 18, 0.815);
+    }
+
+    /* Sección 1 */
+    #sec1 {
+        height: 880px;
+        width: 580px;
+    }
+
+    #caja1 {
+        width: 560px;
+        height: 200px;
+        background-color: brown;
+    }
+
+    #caja2 {
+        width: 560px;
+        height: 200px;
+        background-color: rgb(128, 0, 111);
+    }
+
+    #caja3 {
+        width: 560px;
+        height: 200px;
+        background-color: blue;
+    }
+
+    #caja4 {
+        width: 560px;
+        height: 200px;
+    }
+
+    #sec2 {
+        height: 700px;
+        width: 580px;
+    }
+
+    .caja {
+        width: 170px;
+        height: 150px;
+    }
+
+    .cajab {
+        width: 170px;
+        height: 150px;
+    }
+
+    #sec3 {
+        height: 1200px;
+        width: 580px;
+    }
+
+    .cajas {
+        width: 580px;
+        height: 520px;
+        background-color: aqua;
+        float: left;
+        margin: 1px;
+        box-sizing: border-box;
+    }
+
+    .cajas img {
+        width: 200px;
+        display: block
