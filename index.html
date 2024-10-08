@@ -238,24 +238,26 @@
 
     <!-- Script para manejar el cambio de categorías -->
     <script>
-        document.getElementById('categorias').addEventListener('change', function() {
-            const selectedValue = this.value;
+document.getElementById('categorias').addEventListener('change', function() {
+    const selectedValue = this.value; // Obtiene el valor de la opción seleccionada
 
-            // Ocultar todas las secciones
-            const sections = document.querySelectorAll('main > section');
-            sections.forEach(section => section.classList.add('hidden'));
+    // Ocultar todas las secciones
+    const sections = document.querySelectorAll('main > section');
+    sections.forEach(section => section.classList.add('hidden')); // Agrega la clase 'hidden' a todas las secciones
 
-            // Mostrar la sección seleccionada o la de inicio
-            if (selectedValue === 'categorias') {
-                document.getElementById('productos').classList.remove('hidden');
-            } else {
-                const selectedSection = document.getElementById(selectedValue);
-                if (selectedSection) {
-                    selectedSection.classList.remove('hidden');
-                    selectedSection.scrollIntoView({ behavior: 'smooth' });
-                }
-            }
-        });
+    // Verifica si la opción seleccionada es 'categorias'
+    if (selectedValue === 'categorias') {
+        document.getElementById('productos').classList.remove('hidden'); // Muestra la sección de productos
+        document.getElementById('conteItemsCarrusel').classList.remove('hidden'); // Muestra el carrusel
+    } else {
+        const selectedSection = document.getElementById(selectedValue); // Obtiene la sección correspondiente a la categoría
+        if (selectedSection) {
+            selectedSection.classList.remove('hidden'); // Muestra la sección seleccionada
+            document.getElementById('conteItemsCarrusel').classList.add('hidden'); // Oculta el carrusel
+            selectedSection.scrollIntoView({ behavior: 'smooth' }); // Desplaza la vista hacia la sección
+        }
+    }
+});
     </script>
 </body>
 </html>
