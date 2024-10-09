@@ -122,13 +122,13 @@ footer {
     }
 }
 
-.slider-box{
+#slider-box{
     width: 600px;
     height: 700px;
     margin: 50px auto 0;
     overflow: hidden;
 }
-.slider-box ul {
+#slider-box ul {
     display: flex;
     padding: 0px 10px;
     width: 300%;
@@ -136,7 +136,7 @@ footer {
     
 }
 
-.slider-box li{
+#slider-box li{
     width: 100%;
     list-style: none;
     position: relative;
@@ -162,7 +162,7 @@ footer {
     font-size: 40px;
 } */
 
-.slider-box img{
+#slider-box img{
     width: 100%;
     height: 100%;
 }

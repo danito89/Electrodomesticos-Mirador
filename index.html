@@ -162,7 +162,7 @@
 
         <!-- ARRANCO CON UN SLIDER NUEVO PARA QUE SEA AUTOMATICOO -->
 
-        <div class="slider-box">
+        <section id="slider-box">
             <ul>
                 <li>
                 <img src="/images/carrousel/foto cocina.jpeg" alt="imagen1">
@@ -176,7 +176,7 @@
                    
                         </li>
             </ul>
-        </div>
+        </section>
 
 
         <!-- Inicio del carrusel de imágenes -->
@@ -266,12 +266,12 @@ document.getElementById('categorias').addEventListener('change', function() {
     // Verifica si la opción seleccionada es 'categorias'
     if (selectedValue === 'categorias') {
         document.getElementById('productos').classList.remove('hidden'); // Muestra la sección de productos
-        document.getElementById('conteItemsCarrusel').classList.remove('hidden'); // Muestra el carrusel
+        document.getElementById('slider-box').classList.remove('hidden'); // Muestra el carrusel
     } else {
         const selectedSection = document.getElementById(selectedValue); // Obtiene la sección correspondiente a la categoría
         if (selectedSection) {
             selectedSection.classList.remove('hidden'); // Muestra la sección seleccionada
-            document.getElementById('conteItemsCarrusel').classList.add('hidden'); // Oculta el carrusel
+            document.getElementById('slider-box').classList.add('hidden'); // Oculta el carrusel
             selectedSection.scrollIntoView({ behavior: 'smooth' }); // Desplaza la vista hacia la sección
         }
     }
