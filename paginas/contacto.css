@@ -1,0 +1,44 @@
+/* Estilo general para la página */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif; /* Fuente general */
+    margin: 0; /* Sin margen */
+    padding: 0; /* Sin padding */
+    background-color: #f4f4f4; /* Color de fondo */
+    color: #333; /* Color de texto */
+}
+
+/* Estilo del encabezado */
+header {
+    background-color: #0073e6; /* Fondo azul */
+    color: white; /* Texto blanco */
+    padding: 20px; /* Espaciado interno */
+    text-align: center; /* Centrado */
+    background-image: url(...); /* Imagen de fondo */
+}
+
+header h1 {
+    margin: 0; /* Sin margen en el título */
+}
+
+/* Estilos para la navegación */
+nav ul {
+    list-style: none; /* Sin viñetas */
+    display: flex; /* Elementos en fila */
+    justify-content: center; /* Centrado */
+    gap: 20px; /* Espacio entre enlaces */
+}
+
+nav ul li a {
+    color: white; /* Texto blanco */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: bold; /* Negrita */
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Subrayado al pasar */
+}
