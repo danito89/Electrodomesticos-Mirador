@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+</head>
+<body>
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="/paginas/contacto.html">Contacto</a></li>
+        <li class="nav-item"><a class="nav-link" href="/paginas/acercade.html">Acerca de</a></li>
+        <li class="nav-item"><a class="nav-link" href="../formulario.html" onclick="openPopup('formulario.html'); return false;">Encuesta</a></li>
+    </ul>
+      <!-- Función JavaScript para abrir un popup -->
+      <script>
+        function openPopup(url) {
+            var options = "width=600,height=400,left=100,top=100";
+            window.open(url, '_blank', options);
+        }
+    </script>
+</body>
+</html>
