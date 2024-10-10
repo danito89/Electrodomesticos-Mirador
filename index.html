@@ -160,12 +160,6 @@
         </section>
 
         <!-- ARRANCO CON UN SLIDER NUEVO PARA QUE SEA AUTOMATICOO -->
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/MJkdaVFHrto?si=GVrUkA1jTyVwJFOA" 
-        itle="YouTube video player" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-    </iframe>
     
         <section id="slider-box">
             <ul>
@@ -182,7 +176,6 @@
                         </li>
             </ul>
         </section>
-
 
         <!-- Inicio del carrusel de imágenes -->
         <!-- <div id="conteItemsCarrusel">
@@ -261,26 +254,32 @@
 
     <!-- Script para manejar el cambio de categorías -->
     <script>
-document.getElementById('categorias').addEventListener('change', function() {
-    const selectedValue = this.value; // Obtiene el valor de la opción seleccionada
-
-    // Ocultar todas las secciones
-    const sections = document.querySelectorAll('main > section');
-    sections.forEach(section => section.classList.add('hidden')); // Agrega la clase 'hidden' a todas las secciones
-
-    // Verifica si la opción seleccionada es 'categorias'
-    if (selectedValue === 'categorias') {
-        document.getElementById('productos').classList.remove('hidden'); // Muestra la sección de productos
-        document.getElementById('slider-box').classList.remove('hidden'); // Muestra el carrusel
-    } else {
-        const selectedSection = document.getElementById(selectedValue); // Obtiene la sección correspondiente a la categoría
-        if (selectedSection) {
-            selectedSection.classList.remove('hidden'); // Muestra la sección seleccionada
-            document.getElementById('slider-box').classList.add('hidden'); // Oculta el carrusel
-            selectedSection.scrollIntoView({ behavior: 'smooth' }); // Desplaza la vista hacia la sección
-        }
-    }
-});
-    </script>
-</body>
+        document.getElementById('categorias').addEventListener('change', function() {
+            const selectedValue = this.value; // Obtiene el valor de la opción seleccionada
+        
+            // Ocultar todas las secciones
+            const sections = document.querySelectorAll('main > section');
+            sections.forEach(section => section.classList.add('hidden')); // Agrega la clase 'hidden' a todas las secciones
+        
+            // Verifica si la opción seleccionada es 'categorias'
+            if (selectedValue === 'categorias') {
+                document.getElementById('productos').classList.remove('hidden'); // Muestra la sección de productos
+                document.getElementById('slider-box').classList.remove('hidden'); // Muestra el carrusel
+            } else {
+                const selectedSection = document.getElementById(selectedValue); // Obtiene la sección correspondiente a la categoría
+                if (selectedSection) {
+                    selectedSection.classList.remove('hidden'); // Muestra la sección seleccionada
+                    document.getElementById('slider-box').classList.add('hidden'); // Oculta el carrusel
+                    selectedSection.scrollIntoView({ behavior: 'smooth' }); // Desplaza la vista hacia la sección
+        
+                    // Elimina la opción "CATEGORIAS" una vez se selecciona otra opción
+                    const categoriasOption = document.querySelector('option[value="categorias"]');
+                    if (categoriasOption) {
+                        categoriasOption.remove(); // Elimina la opción "CATEGORIAS"
+                    }
+                }
+            }
+        });
+        </script>
+        </body>
 </html>
