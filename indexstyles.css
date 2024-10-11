@@ -43,6 +43,17 @@ nav ul li a:hover {
     text-decoration: underline; /* Subrayado al pasar */
 }
 
+.btn_iniciarSesion{
+    list-style: none; /* Sin viñetas */
+    display: flex; /* Elementos en fila */
+    text-decoration: underline;
+    color: white; /* Texto blanco */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: bold; /* Negrita */
+    justify-content: right;
+    
+}
+
 /* Estilo del select de categorías */
 #categorias {
     margin-top: 15px; /* Espacio superior */

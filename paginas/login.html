@@ -3,10 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login y Registro</title>
+    <title>Login / Registro</title>
     <link rel="stylesheet" href="login.css">
+    <script src="https://kit.fontawesome.com/ebd08e62ef.js" crossorigin="anonymous"></script>
+        <style>
+            .hidden { display: none; } /* Clase para ocultar secciones */
+        </style>
 </head>
 <body>
+    <header>
+        <div class="container">
+            <h1 class="text-center">Electrodomésticos Mirador</h1>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../paginas/contacto.html">Contacto</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../paginas/acercade.html">Acerca de</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../formulario.html" onclick="openPopup('../formulario.html'); return false;">Encuesta</a></li>
+                    </ul>
+        </div>
+</nav>
+</div>
+     <!-- Función JavaScript para abrir un popup -->
+      <script>
+         function openPopup(url) {
+         var options = "width=600,height=400,left=100,top=100";
+         window.open(url, '_blank', options);
+         }
+     </script>
+   </header>
 
     <main>
 
