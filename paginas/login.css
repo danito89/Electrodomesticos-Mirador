@@ -7,7 +7,7 @@
 }
 
 body{
-    background-image: url(images/fondos/fondo4.jpg);
+    background-image: url(../images/fondos/fondo4.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
