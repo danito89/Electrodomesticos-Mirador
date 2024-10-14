@@ -11,8 +11,42 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: scroll;
+    /* background-attachment: fixed; esto por ahi causa problemas pruebo con la misma linea pero "scroll" */
+    
 }
+/* agrego desde aca*/
+header {
+    background-color: #0073e6; /* Fondo azul */
+    color: white; /* Texto blanco */
+    padding: 20px; /* Espaciado interno */
+    text-align: center; /* Centrado */
+    background-image: url(...); /* Imagen de fondo */
+    /* faltaba css para header por eso no lo tomaba */
+}
+
+header h1 {
+    margin: 0; /* Sin margen en el título */
+}
+
+/* Estilos para la navegación */
+nav ul {
+    list-style: none; /* Sin viñetas */
+    display: flex; /* Elementos en fila */
+    justify-content: center; /* Centrado */
+    gap: 20px; /* Espacio entre enlaces */
+}
+
+nav ul li a {
+    color: white; /* Texto blanco */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: bold; /* Negrita */
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Subrayado al pasar */
+}
+/* hasta aca*/
 
 main{
     width: 100%;
@@ -131,7 +165,7 @@ main{
 
 /* RESPONSIVE  */
 
-@media  screen and {max-width: 850px;
+@media screen and (max-width: 850px) { /* error de sistaxys arreglado*/ /*@media screen and {max-width: 850px;*/
 
     main{
         margin-top: 50px;
