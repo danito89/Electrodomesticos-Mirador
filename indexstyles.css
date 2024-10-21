@@ -150,8 +150,7 @@ footer {
 #slider-box li{
     width: 100%;
     list-style: none;
-    position: relative;
-   
+    position: relative;   
 }
 
 .texto{
@@ -161,21 +160,12 @@ footer {
     bottom: 250px;
     font-size: 40px;
     color: black;
-    back
+    background: none;
 }
-
-/* .texto p{
-    position: absolute;
-    text-align: center;
-    top: 250px;
-    color: white;
-    background-color: black;
-    font-size: 40px;
-} */
 
 #slider-box img {
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 
 @keyframes slide {
