@@ -208,7 +208,19 @@ footer {
     }
 }
 
-
+.btn-square-social {
+    width: 70px !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    height: 70px !important;
+    text-align: center;
+    padding: 0px;
+    font-size: 15px;
+    }
+    .btn-square-social:hover {
+        opacity: 0.8; /* Efecto al pasar el mouse */
+    }
+    
 /* #conteItemsCarrusel{
     height: 600px;
     width: 800px;
