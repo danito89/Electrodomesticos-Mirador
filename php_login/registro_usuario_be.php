@@ -11,4 +11,20 @@
             VALUES('$nombre_completo','$correo', '$usuario', '$contrasena' )";
 
     $ejecutar = mysqli_query($conexion, $query);
+
+    if($ejecutar){
+        echo'
+                <script>
+                    alert("Usuario creado exitosamente");
+                    window.location = "../index.html";
+                </script> ';
+    } else{
+        echo'
+                 <script>
+                    alert("Error, intente nuevamente");
+                    window.location = "../index.html";
+                </script> '; }
+
+    mysqli_close($conexion);
+
 ?>
