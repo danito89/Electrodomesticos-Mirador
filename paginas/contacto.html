@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- Configuración básica del documento -->
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Contacto</title>
-        <link rel="stylesheet" href="contacto.css">
-        <script src="https://kit.fontawesome.com/ebd08e62ef.js" crossorigin="anonymous"></script>
-        <style>
-            .hidden { display: none; } /* Clase para ocultar secciones */
-        </style>
-    </head>
+<head>
+    <!-- Configuración básica del documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="../css/contacto.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
 <body>
     <header>
         <div class="container">
@@ -21,18 +18,67 @@
                         <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
                         <li class="nav-item"><a class="nav-link" href="../paginas/contacto.html">Contacto</a></li>
                         <li class="nav-item"><a class="nav-link" href="../paginas/acercade.html">Acerca de</a></li>
-                        <li class="btn_iniciarSesion"> <a href="paginas/login.html">Iniciar Sesion / Registrarse</a></li>
+                        <li class="btn_iniciarSesion"><a href="paginas/login.html">Iniciar Sesión / Registrarse</a></li>
                     </ul>
+                </div>
+            </nav>
         </div>
-</nav>
-</div>
-     <!-- Función JavaScript para abrir un popup -->
-      <script>
-         function openPopup(url) {
-         var options = "width=600,height=400,left=100,top=100";
-         window.open(url, '_blank', options);
-         }
-     </script>
-   </header>
+    </header>
+
+    <!-- Formulario de contacto -->
+    <section class="contacto my-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Contáctanos</h2>
+            <form action="#" method="post" class="p-4 border rounded bg-light">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Ingresa tu correo electrónico" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="Ingresa tu número de teléfono">
+                </div>
+                <div class="form-group">
+                    <label for="motivo">Motivo de Contacto</label>
+                    <select class="form-control" id="motivo" name="motivo" required>
+                        <option value="" disabled selected>Selecciona el motivo</option>
+                        <option value="consulta_producto">Consulta sobre producto</option>
+                        <option value="soporte_tecnico">Soporte técnico</option>
+                        <option value="garantias_devoluciones">Garantías y devoluciones</option>
+                        <option value="consulta_disponibilidad">Consulta sobre disponibilidad</option>
+                        <option value="sugerencias">Sugerencias</option>
+                        <option value="otros">Otros</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea class="form-control" id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="text-center my-4">
+        <div class="social-links mb-3">
+            <h3>Síguenos en:</h3>
+            <button class="btn btn-primary btn-square-social" style="background-color: #3b5998;"><i class="fab fa-facebook-f"></i></button>  
+            <button class="btn btn-primary btn-square-social" style="background-color: #ac2bac;"><i class="fab fa-instagram"></i></button>  
+            <button class="btn btn-primary btn-square-social" style="background-color: #25d366;"><i class="fab fa-whatsapp"></i></button>  
+            <button class="btn btn-primary btn-square-social" style="background-color: #677319;"><i class="fas fa-envelope"></i></button>
+        </div>
+        <div class="address mb-3">
+            <h3>Nuestra Dirección:</h3>
+            <p>Calle Ejemplo 123, Ciudad, País</p>
+        </div>
+        <p>&copy; 2024 Electrodomésticos Mirador. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/ebd08e62ef.js" crossorigin="anonymous"></script>
 </body>
 </html>
