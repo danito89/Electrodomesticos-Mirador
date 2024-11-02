@@ -4,9 +4,10 @@
     margin: 0;
     box-sizing: border-box;
 }
-
 body {
     font-family: Arial, sans-serif; /* Fuente general */
+    margin: 0; /* Sin margen */
+    padding: 0; /* Sin padding */
     background-color: #f4f4f4; /* Color de fondo */
     color: #333; /* Color de texto */
 }
@@ -16,11 +17,11 @@ header {
     background-color: #0073e6; /* Fondo azul */
     color: white; /* Texto blanco */
     padding: 20px; /* Espaciado interno */
-    text-align: center; /* Centrado */
+    text-align: left;
 }
-
 header h1 {
     margin: 0; /* Sin margen en el título */
+    text-align: center;
 }
 
 /* Estilos para la navegación */
@@ -30,72 +31,19 @@ nav ul {
     justify-content: center; /* Centrado */
     gap: 20px; /* Espacio entre enlaces */
 }
-
 nav ul li a {
     color: white; /* Texto blanco */
     text-decoration: none; /* Sin subrayado */
     font-weight: bold; /* Negrita */
 }
-
 nav ul li a:hover {
     text-decoration: underline; /* Subrayado al pasar */
 }
 
-.btn_iniciarSesion {
-    list-style: none; /* Sin viñetas */
-    display: flex; /* Elementos en fila */
-    justify-content: right; /* Alineación a la derecha */
-}
-
-.btn_iniciarSesion a {
-    color: white; /* Texto blanco */
-    text-decoration: none; /* Sin subrayado */
-    font-weight: bold; /* Negrita */
-}
-
-/* Estilo del select de categorías */
-#categorias {
-    margin-top: 15px; /* Espacio superior */
-    padding: 10px; /* Padding interno */
-    border: 2px solid #0073e6; /* Borde azul */
+/* Estilo del formulario */
+.formulario-contacto {
+    border: 1px solid #ccc; /* Borde ligero */
     border-radius: 5px; /* Bordes redondeados */
-    background-color: white; /* Fondo blanco */
-    color: #333; /* Texto gris oscuro */
-    font-weight: bold; /* Negrita */
-}
-
-/* Sección de productos */
-main {
-    padding: 20px; /* Espaciado general */
-    display: flex;
-    justify-content: space-between;
-}
-
-table {
-    width: 700px; /* Ancho fijo */
-    border-collapse: collapse; /* Colapsar bordes */
-    height: 600px;
-}
-
-table th, table td {
-    border: 1px solid #ddd; /* Bordes de celdas */
-    padding: 12px; /* Padding en celdas */
-    text-align: center; /* Texto centrado */
-}
-
-table th {
-    background-color: #0073e6; /* Fondo azul en encabezados */
-    color: white; /* Texto blanco */
-}
-
-table tbody tr:nth-child(even) {
-    background-color: #f9f9f9; /* Fondo alternado para filas */
-}
-
-table img {
-    width: 75px; /* Ancho imágenes */
-    height: 75px; /* Alto imágenes */
-    object-fit: cover; /* Ajuste de imagen */
 }
 
 /* Estilo de botones */
@@ -107,7 +55,6 @@ button {
     border-radius: 5px; /* Bordes redondeados */
     cursor: pointer; /* Cambiar cursor */
 }
-
 button:hover {
     background-color: #005bb5; /* Fondo más oscuro al pasar */
 }
@@ -117,7 +64,7 @@ footer {
     background-color: #0073e6; /* Fondo azul */
     color: white; /* Texto blanco */
     text-align: center; /* Texto centrado */
-    padding: 20px; /* Espaciado */
+    padding: 10px; /* Espaciado */
     width: 100%; /* Ancho completo */
 }
 
@@ -131,70 +78,7 @@ footer {
     }
 }
 
-#slider-box {
-    width: 600px;
-    height: 700px;
-    margin: 50px auto 0;
-    overflow: hidden;
-}
-
-#slider-box ul {
-    display: flex;
-    padding: 0px 10px;
-    width: 300%;
-    animation: slide 12s infinite alternate ease-in-out;
-}
-
-#slider-box li {
-    width: 100%;
-    list-style: none;
-    position: relative;   
-}
-
-.texto {
-    position: absolute;
-    text-align: center;
-    padding: 0 250px;
-    bottom: 250px;
-    font-size: 40px;
-    color: black;
-}
-
-#slider-box img {
-    width: 100%;
-    height: auto;
-}
-
-@keyframes slide {
-    0% { margin-left: 0; }
-    20% { margin-left: 0; }
-    25% { margin-left: -100%; }
-    45% { margin-left: -100%; }
-    50% { margin-left: -180%; }
-    70% { margin-left: -180%; }
-    75% { margin-left: -200%; }
-    100% { margin-left: -200%; }
-}
-
-@media (max-width: 991px) {
-    body {
-        padding: 30px;
-    }
-
-    .slider-box {
-        width: 100%;
-    }
-
-    .texto {
-        top: 50px;
-        padding: 0;
-    }
-
-    .texto p {
-        font-size: 15px;
-    }
-}
-
+/* Estilo específico para los botones sociales */
 .btn-square-social {
     width: 70px !important;
     max-width: 100% !important;
@@ -206,5 +90,5 @@ footer {
 }
 
 .btn-square-social:hover {
-    opacity: 0.8; /* Efecto al pasar el mouse */
+    opacity: 0.8; /* Opacidad al pasar el ratón */
 }

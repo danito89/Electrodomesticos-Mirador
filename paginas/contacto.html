@@ -1,76 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <!-- Configuración básica del documento -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
-    <link rel="stylesheet" href="../css/contacto.css">
     <script src="https://kit.fontawesome.com/ebd08e62ef.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-</head>
+    <link rel="stylesheet" href="../css/contacto.css"></head>
 <body>
     <header>
         <div class="container">
             <h1 class="text-center">Electrodomésticos Mirador</h1>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
+                    <!-- Menú de navegación -->
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
                         <li class="nav-item"><a class="nav-link" href="../paginas/contacto.html">Contacto</a></li>
-                        <li class="btn_iniciarSesion"><a href="../paginas/login.html">Iniciar Sesión / Registrarse</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../paginas/login.html">Iniciar Sesión / Registrarse</a></li>
                     </ul>
                 </div>
             </nav>
         </div>
     </header>
 
-    <!-- Formulario de contacto -->
-    <section class="contacto my-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Contáctanos</h2>
-            <form action="#" method="post" class="p-4 border rounded bg-light">
-                <div class="form-group">
-                    <label for="nombre">Nombre</label>
-                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Correo Electrónico</label>
-                    <input type="email" class="form-control" id="email" name="email" placeholder="Ingresa tu correo electrónico" required>
-                </div>
-                <div class="form-group">
-                    <label for="telefono">Teléfono</label>
-                    <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="Ingresa tu número de teléfono">
-                </div>
-                <div class="form-group">
-                    <label for="motivo">Motivo de Contacto</label>
-                    <select class="form-control" id="motivo" name="motivo" required>
-                        <option value="" disabled selected>Selecciona el motivo</option>
-                        <option value="consulta_producto">Consulta sobre producto</option>
-                        <option value="soporte_tecnico">Soporte técnico</option>
-                        <option value="garantias_devoluciones">Garantías y devoluciones</option>
-                        <option value="consulta_disponibilidad">Consulta sobre disponibilidad</option>
-                        <option value="sugerencias">Sugerencias</option>
-                        <option value="otros">Otros</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="mensaje">Mensaje</label>
-                    <textarea class="form-control" id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary btn-block">Enviar</button>
-            </form>
-        </div>
-    </section>
+<!-- Formulario de contacto -->
+<section class="contacto my-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Contáctanos</h2>
+        <form action="#" method="post" class="p-4 border rounded bg-light formulario-contacto">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Ingresa tu correo electrónico" required>
+            </div>
+            <div class="form-group">
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="Ingresa tu número de teléfono">
+            </div>
+            <div class="form-group">
+                <label for="motivo">Motivo de Contacto:</label>
+                <select class="form-control" id="motivo" name="motivo" required>
+                    <option value="" disabled selected>Selecciona el motivo</option>
+                    <option value="consulta_producto">Consulta sobre producto</option>
+                    <option value="soporte_tecnico">Soporte técnico</option>
+                    <option value="garantias_devoluciones">Garantías y devoluciones</option>
+                    <option value="consulta_disponibilidad">Consulta sobre disponibilidad</option>
+                    <option value="sugerencias">Sugerencias</option>
+                    <option value="otros">Otros</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="mensaje">Mensaje:</label>
+                <textarea class="form-control" id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Enviar</button>
+        </form>
+    </div>
+</section>
 
-    <!-- Pie de página -->
+    <!-- Inicio del pie de página -->
     <footer class="text-center my-4">
         <div class="social-links mb-3">
             <h3>Síguenos en:</h3>
-            <button class="btn btn-primary btn-square-social" style="background-color: #3b5998;"><i class="fab fa-facebook-f"></i></button>  
-            <button class="btn btn-primary btn-square-social" style="background-color: #ac2bac;"><i class="fab fa-instagram"></i></button>  
-            <button class="btn btn-primary btn-square-social" style="background-color: #25d366;"><i class="fab fa-whatsapp"></i></button>  
-            <button class="btn btn-primary btn-square-social" style="background-color: #677319;"><i class="fas fa-envelope"></i></button>
+            <!-- Redes Sociales -->
+            <button class="btn btn-square-social" style="background-color: #3b5998;" role="button">
+                <i class="fab fa-facebook-f"></i>
+            </button>  
+            <button class="btn btn-square-social" style="background-color: #ac2bac;" role="button">
+                <i class="fab fa-instagram"></i>
+            </button>  
+            <button class="btn btn-square-social" style="background-color: #25d366;" role="button">
+                <i class="fab fa-whatsapp"></i>
+            </button>  
+            <button class="btn btn-square-social" style="background-color: #677319;" role="button">
+                <i class="fas fa-envelope"></i>
+            </button>
         </div>
         <div class="address mb-3">
             <h3>Nuestra Dirección:</h3>
@@ -78,7 +87,5 @@
         </div>
         <p>&copy; 2024 Electrodomésticos Mirador. Todos los derechos reservados.</p>
     </footer>
-
-    <script src="https://kit.fontawesome.com/ebd08e62ef.js" crossorigin="anonymous"></script>
 </body>
 </html>

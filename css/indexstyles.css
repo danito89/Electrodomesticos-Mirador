@@ -17,10 +17,12 @@ header {
     background-color: #0073e6; /* Fondo azul */
     color: white; /* Texto blanco */
     padding: 20px; /* Espaciado interno */
-    text-align: center; /* Centrado */
+    text-align: left;
 }
 header h1 {
     margin: 0; /* Sin margen en el título */
+    text-align: center;
+
 }
 
 /* Estilos para la navegación */
@@ -37,15 +39,6 @@ nav ul li a {
 }
 nav ul li a:hover {
     text-decoration: underline; /* Subrayado al pasar */
-}
-.btn_iniciarSesion {
-    list-style: none; /* Sin viñetas */
-    display: flex; /* Elementos en fila */
-    text-decoration: underline;
-    color: white; /* Texto blanco */
-    text-decoration: none; /* Sin subrayado */
-    font-weight: bold; /* Negrita */
-    justify-content: right;
 }
 
 /* Estilo del select de categorías */
@@ -66,9 +59,9 @@ main {
     justify-content: space-between;
 }
 table {
-    width: 700px; /* Ancho fijo */
+    width: 750px; /* Ancho fijo */
     border-collapse: collapse; /* Colapsar bordes */
-    height: 600px;
+    height: 650px;
 }
 table th, table td {
     border: 1px solid #ddd; /* Bordes de celdas */
@@ -120,3 +113,15 @@ footer {
     }
 }
 
+.btn-square-social {
+    width: 70px !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    height: 70px !important;
+    text-align: center;
+    padding: 0px;
+    font-size: 15px;
+}
+
+.btn-square-social:hover {
+    opacity: 0.8; /* Efecto al pasar el mouse */
