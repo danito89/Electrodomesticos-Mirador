@@ -17,7 +17,6 @@ header {
     color: white; /* Texto blanco */
     padding: 20px; /* Espaciado interno */
     text-align: center; /* Centrado */
-    background-image: url(...); /* Imagen de fondo */
 }
 
 header h1 {

@@ -18,7 +18,6 @@ header {
     color: white; /* Texto blanco */
     padding: 20px; /* Espaciado interno */
     text-align: center; /* Centrado */
-    background-image: url(...); /* Imagen de fondo */
 }
 header h1 {
     margin: 0; /* Sin margen en el título */
