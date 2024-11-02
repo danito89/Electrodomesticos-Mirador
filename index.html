@@ -11,7 +11,6 @@
         .hidden { display: none; } /* Clase para ocultar secciones */
     </style>
 </head>
-
 <body>
     <!-- Inicio del encabezado -->
     <header>
@@ -44,7 +43,7 @@
         </div>
     </header>
     <!-- Fin del encabezado -->
-
+    
     <!-- Inicio del contenido principal -->
     <main>
         <!-- Sección de productos destacados -->
@@ -111,8 +110,57 @@
 
         <!-- Secciones para cada categoría -->
         <section id="celulares" class="hidden">
-            <h2>Celulares</h2>
-            <p>EN CONSTRUCCION</p>
+            <div class="row">
+                <div class="col-md-6 col-12">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th colspan="4">Productos Destacados</th>
+                            </tr>
+                            <tr>
+                                <td>Imagen</td>
+                                <td>Nombre del Producto</td>
+                                <td>Precio</td>
+                                <td>Acciones</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Lista de CELULARES -->
+                            <tr>
+                                <td><img src="images/productos/CELULARES/Celular Xiaomi Redmi 13C/01.png" alt="Producto 1" class="img-fluid"></td>
+                                <td>Celular Xiaomi Redmi 13C 6.74" 128GB Negro</td>
+                                <td>$ 411.770</td>
+                                <td><button class="btn btn-primary">Añadir al Carrito</button></td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/productos/CELULARES/Celular Samsung A05/01.jpg" alt="Producto 2" class="img-fluid"></td>
+                                <td>Celular Samsung A05 6.7" 64GB Plata</td>
+                                <td>$ 239.979</td>
+                                <td><button class="btn btn-primary">Añadir al Carrito</button></td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/productos/CELULARES/Celular Samsung A15/01.png" alt="Producto 3" class="img-fluid"></td>
+                                <td>Celular Samsung A15 6.5" 128GB Black Blue</td>
+                                <td>$ 349.999</td>
+                                <td><button class="btn btn-primary">Añadir al Carrito</button></td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/productos/CELULARES/Celular Motorola G24/01.png" alt="Producto 4" class="img-fluid"></td>
+                                <td>Celular Motorola G24 6.6" 128GB Gris</td>
+                                <td>$ 369.899</td>
+                                <td><button class="btn btn-primary">Añadir al Carrito</button></td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/productos/CELULARES/Celular Xiaomi Redmi A3/01.jpg" alt="Producto 5" class="img-fluid"></td>
+                                <td>Celular Xiaomi Redmi A3 6.71 64GB Azul</td>
+                                <td>$ 199.989</td>
+                                <td><button class="btn btn-primary">Añadir al Carrito</button></td>
+                            </tr>
+                            <!-- Fin de la lista de CELULARES -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </section>
         <section id="iluminacion" class="hidden">
             <h2>Iluminación</h2>
@@ -150,41 +198,28 @@
             <h2>Fotografía</h2>
             <p>EN CONSTRUCCION</p>
         </section>
-
-        <!-- ARRANCO CON UN SLIDER NUEVO PARA QUE SEA AUTOMATICOO -->
-    
-        <section id="slider-box">
-            <ul>
-                <li><img src="images/carrousel/foto cocina.jpeg" alt="imagen1"></li>
-
-                <li><img src="images/carrousel/foto compu.jpeg" alt="imagen2"></li>
-                    <li><img src="images/carrousel/foto surtida.jpeg" alt="imagen3"></li>
-            </ul>
-        </section>
+        
     </main>
     <!-- Fin del contenido principal -->
-
+    
     <!-- Inicio del pie de página -->
     <footer class="text-center my-4">
         <div class="social-links mb-3">
             <h3>Síguenos en:</h3>
-            
-<!-- BOTONES BOOTSTRAP INICIO -->
-<!-- Facebook -->
-<button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-square-social" style="background-color: #3b5998;" href="#!" role="button">
-    <i class="fab fa-facebook-f"></i></button>  
-<!-- Instagram -->
-<button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-square-social"style="background-color: #ac2bac;" href="#!" role="button"><i
-    class="fab fa-instagram"></i></button>  
-<!-- Whatsapp -->
-<button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-square-social"style="background-color: #25d366;" href="#!" role="button"><i
-    class="fab fa-whatsapp"></i></button>  
-<!-- Mail -->
-<button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-square-social" style="background-color: #677319;" href="#!" role="button">
-    <i class="fas fa-envelope"></i></button>
-
-<!-- BOTONES BOOTSTRAP FIN -->
-
+            <!-- BOTONES BOOTSTRAP INICIO -->
+            <!-- Facebook -->
+            <button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-square-social" style="background-color: #3b5998;" href="#!" role="button">
+                <i class="fab fa-facebook-f"></i></button>  
+            <!-- Instagram -->
+            <button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-square-social" style="background-color: #ac2bac;" href="#!" role="button"><i
+                class="fab fa-instagram"></i></button>  
+            <!-- Whatsapp -->
+            <button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-square-social" style="background-color: #25d366;" href="#!" role="button"><i
+                class="fab fa-whatsapp"></i></button>  
+            <!-- Mail -->
+            <button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-square-social" style="background-color: #677319;" href="#!" role="button">
+                <i class="fas fa-envelope"></i></button>
+            <!-- BOTONES BOOTSTRAP FIN -->
         </div>
         <div class="address mb-3">
             <h3>Nuestra Dirección:</h3>
@@ -193,36 +228,24 @@
         <p>&copy; 2024 Electrodomésticos Mirador. Todos los derechos reservados.</p>
     </footer>
     <!-- Fin del pie de página -->
-
+    
     <!-- Script para manejar el cambio de categorías -->
     <script>
         document.getElementById('categorias').addEventListener('change', function() {
             const selectedValue = this.value; // Obtiene el valor de la opción seleccionada
-        
             // Ocultar todas las secciones
             const sections = document.querySelectorAll('main > section');
             sections.forEach(section => section.classList.add('hidden')); // Agrega la clase 'hidden' a todas las secciones
-        
             // Verifica si la opción seleccionada es 'categorias'
             if (selectedValue === 'categorias') {
                 document.getElementById('productos').classList.remove('hidden'); // Muestra la sección de productos
-                document.getElementById('slider-box').classList.remove('hidden'); // Muestra el carrusel
             } else {
                 const selectedSection = document.getElementById(selectedValue); // Obtiene la sección correspondiente a la categoría
                 if (selectedSection) {
                     selectedSection.classList.remove('hidden'); // Muestra la sección seleccionada
-                    document.getElementById('slider-box').classList.add('hidden'); // Oculta el carrusel
-                    selectedSection.scrollIntoView({ behavior: 'smooth' }); // Desplaza la vista hacia la sección
-        
-                    // Elimina la opción "CATEGORIAS" una vez se selecciona otra opción
-                    const categoriasOption = document.querySelector('option[value="categorias"]');
-                    if (categoriasOption) {
-                        categoriasOption.remove(); // Elimina la opción "CATEGORIAS"
-                    }
                 }
             }
         });
-        
-        </script>
-        </body>
+    </script>
+</body>
 </html>
