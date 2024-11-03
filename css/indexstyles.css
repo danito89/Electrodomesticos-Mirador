@@ -27,9 +27,10 @@ nav ul {
     display: flex;
     justify-content: center;
     gap: 20px;
+    padding-left: 0;
 }
 nav ul li a {
-    color: white;
+    color: white !important; /* Sobrescribe Bootstrap */
     text-decoration: none;
     font-weight: bold;
 }
@@ -48,7 +49,7 @@ nav ul li a:hover {
     font-weight: bold;
 }
 
-/* Tabla de productos */
+/* Sección de productos */
 main {
     padding: 20px;
     display: flex;
@@ -92,14 +93,40 @@ footer {
     color: white;
     text-align: center;
     padding: 10px;
+    width: 100%;
 }
 
 /* Botones sociales */
 .btn-square-social {
-    width: 70px;
-    height: 70px;
-    text-align: center;
-    font-size: 15px;
-    background-color: inherit;
-    border: none;
+    width: 70px !important;
+    height: 70px !important;
+    border-radius: 50% !important; /* Asegura el borde redondeado */
+    display: inline-flex!important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 1.5em !important;
+    color: white !important;
+    border: none !important;
+    margin: 5px !important;
+    cursor: pointer !important;
+}
+
+.btn-square-social.btn-facebook {
+    background-color: #3b5998; /* Azul de Facebook */
+}
+
+.btn-square-social.btn-instagram {
+    background-color: #ac2bac; /* Magenta de Instagram */
+}
+
+.btn-square-social.btn-whatsapp {
+    background-color: #25d366; /* Verde de WhatsApp */
+}
+
+.btn-square-social.btn-email {
+    background-color: #677319; /* Verde oliva para email */
+}
+
+.btn-square-social:hover {
+    opacity: 0.8;
 }
