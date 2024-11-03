@@ -50,12 +50,11 @@
                     <table class="table table-striped">
                         <thead>
                             <tr>
-                                <th colspan="5">Productos Destacados</th>
+                                <th colspan="4">Productos Destacados</th>
                             </tr>
                             <tr>
                                 <td>Imagen</td>
                                 <td>Nombre del Producto</td>
-                                <td>Descripción</td>
                                 <td>Precio</td>
                                 <td>Acciones</td>
                             </tr>
@@ -65,35 +64,30 @@
                             <tr>
                                 <td><img src="images/productos/producto1.jpg" alt="Producto 1" class="img-fluid"></td>
                                 <td>Producto 1</td>
-                                <td>Descripción breve del producto.</td>
                                 <td>$XX.XX</td>
                                 <td><button class="btn btn-primary">Añadir al Carrito</button></td>
                             </tr>
                             <tr>
                                 <td><img src="images/productos/producto2.jpg" alt="Producto 2" class="img-fluid"></td>
                                 <td>Producto 2</td>
-                                <td>Descripción breve del producto.</td>
                                 <td>$XX.XX</td>
                                 <td><button class="btn btn-primary">Añadir al Carrito</button></td>
                             </tr>
                             <tr>
                                 <td><img src="images/productos/producto3.jpg" alt="Producto 3" class="img-fluid"></td>
                                 <td>Producto 3</td>
-                                <td>Descripción breve del producto.</td>
                                 <td>$XX.XX</td>
                                 <td><button class="btn btn-primary">Añadir al Carrito</button></td>
                             </tr>
                             <tr>
                                 <td><img src="images/productos/producto4.jpg" alt="Producto 4" class="img-fluid"></td>
                                 <td>Producto 4</td>
-                                <td>Descripción breve del producto.</td>
                                 <td>$XX.XX</td>
                                 <td><button class="btn btn-primary">Añadir al Carrito</button></td>
                             </tr>
                             <tr>
                                 <td><img src="images/productos/producto5.jpg" alt="Producto 5" class="img-fluid"></td>
                                 <td>Producto 5</td>
-                                <td>Descripción breve del producto.</td>
                                 <td>$XX.XX</td>
                                 <td><button class="btn btn-primary">Añadir al Carrito</button></td>
                             </tr>
@@ -328,5 +322,49 @@
             }
         });
     </script>
+    
+    <!-- Script para que aparezcan productos al azar -->
+<script>
+    const productosDisponibles = [
+        { nombre: 'Celular Xiaomi Redmi 13C', imagen: 'images/productos/CELULARES/Celular Xiaomi Redmi 13C/01.png', precio: '$ 411.770' },
+        { nombre: 'Celular Samsung A05', imagen: 'images/productos/CELULARES/Celular Samsung A05/01.jpg', precio: '$ 239.979' },
+        { nombre: 'Celular Samsung A15', imagen: 'images/productos/CELULARES/Celular Samsung A15/01.png', precio: '$ 349.999' },
+        { nombre: 'Celular Motorola G24', imagen: 'images/productos/CELULARES/Celular Motorola G24/01.png', precio: '$ 369.899' },
+        { nombre: 'Computadora Gamer Gfast X-501', imagen: 'images/productos/COMPUTACION/Computadora Gamer Gfast X-501/01.jpg', precio: '$ 972.630' },
+        { nombre: 'Notebook Lenovo LOQ15ARP9', imagen: 'images/productos/COMPUTACION/Notebook Lenovo LOQ15ARP9 Gamer R7/01.jpg', precio: '$ 2.302.899' },
+        { nombre: 'Smart Tv Samsung 32"', imagen: 'images/productos/SMARTTV/Smart Tv Samsung 32/01.png', precio: '$ 395.900' },
+        { nombre: 'Smart Tv LG 32"', imagen: 'images/productos/SMARTTV/Smart Tv LG 32/01.jpg', precio: '$ 426.930' },
+        //SE PUEDEN IR AGREGANDO MAS PRODUCTOS QUE VAN A APARECER AL AZAR
+    ];
+    // Función para obtener 5 productos aleatorios
+    function obtenerProductosAleatorios(cantidad) {
+        const productosSeleccionados = [];
+        const productosCopy = [...productosDisponibles]; // Copia de la lista original
+        while (productosSeleccionados.length < cantidad && productosCopy.length > 0) {
+            const indexAleatorio = Math.floor(Math.random() * productosCopy.length);
+            productosSeleccionados.push(productosCopy.splice(indexAleatorio, 1)[0]);
+        }
+        return productosSeleccionados;
+    }
+    // Función para mostrar los productos en la sección de "Productos Destacados"
+    function mostrarProductosDestacados() {
+        const productosAleatorios = obtenerProductosAleatorios(5); // Obtiene 5 productos aleatorios
+        const tbody = document.querySelector('#productos tbody');
+        tbody.innerHTML = ''; // Limpia cualquier contenido previo
+        productosAleatorios.forEach(producto => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td><img src="${producto.imagen}" alt="${producto.nombre}" class="img-fluid"></td>
+                <td>${producto.nombre}</td>
+                <td>${producto.precio}</td>
+                <td><button class="btn btn-primary">Añadir al Carrito</button></td>
+            `;
+            tbody.appendChild(row);
+        });
+    }
+    // Llamada para mostrar los productos destacados al cargar la página
+    document.addEventListener('DOMContentLoaded', mostrarProductosDestacados);
+</script>
+
 </body>
 </html>
