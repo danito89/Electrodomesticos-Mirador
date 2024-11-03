@@ -1,127 +1,105 @@
-/* Estilo general para la página */
+/* Estilo general */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 body {
-    font-family: Arial, sans-serif; /* Fuente general */
-    margin: 0; /* Sin margen */
-    padding: 0; /* Sin padding */
-    background-color: #f4f4f4; /* Color de fondo */
-    color: #333; /* Color de texto */
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
-/* Estilo del encabezado */
+/* Encabezado */
 header {
-    background-color: #0073e6; /* Fondo azul */
-    color: white; /* Texto blanco */
-    padding: 20px; /* Espaciado interno */
-    text-align: left;
+    background-color: #0073e6;
+    color: white;
+    padding: 20px;
+    text-align: center;
 }
 header h1 {
-    margin: 0; /* Sin margen en el título */
-    text-align: center;
-
+    margin: 0;
 }
 
-/* Estilos para la navegación */
+/* Navegación */
 nav ul {
-    list-style: none; /* Sin viñetas */
-    display: flex; /* Elementos en fila */
-    justify-content: center; /* Centrado */
-    gap: 20px; /* Espacio entre enlaces */
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 nav ul li a {
-    color: white; /* Texto blanco */
-    text-decoration: none; /* Sin subrayado */
-    font-weight: bold; /* Negrita */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
 nav ul li a:hover {
-    text-decoration: underline; /* Subrayado al pasar */
+    text-decoration: underline;
 }
 
-/* Estilo del select de categorías */
+/* Select de categorías */
 #categorias {
-    margin-top: 15px; /* Espacio superior */
-    padding: 10px; /* Padding interno */
-    border: 2px solid #0073e6; /* Borde azul */
-    border-radius: 5px; /* Bordes redondeados */
-    background-color: white; /* Fondo blanco */
-    color: #333; /* Texto gris oscuro */
-    font-weight: bold; /* Negrita */
+    margin-top: 15px;
+    padding: 10px;
+    border: 2px solid #0073e6;
+    border-radius: 5px;
+    background-color: white;
+    color: #333;
+    font-weight: bold;
 }
 
-/* Sección de productos */
+/* Tabla de productos */
 main {
-    padding: 20px; /* Espaciado general */
+    padding: 20px;
     display: flex;
     justify-content: space-between;
 }
 table {
-    width: 750px; /* Ancho fijo */
-    border-collapse: collapse; /* Colapsar bordes */
-    height: 650px;
+    width: 100%;
+    border-collapse: collapse;
 }
 table th, table td {
-    border: 1px solid #ddd; /* Bordes de celdas */
-    padding: 12px; /* Padding en celdas */
-    text-align: center; /* Texto centrado */
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
 }
 table th {
-    background-color: #0073e6; /* Fondo azul en encabezados */
-    color: white; /* Texto blanco */
-}
-table tbody tr:nth-child(even) {
-    background-color: #f9f9f9; /* Fondo alternado para filas */
+    background-color: #0073e6;
+    color: white;
 }
 table img {
-    width: 75px; /* Ancho imágenes */
-    height: 75px; /* Alto imágenes */
-    object-fit: cover; /* Ajuste de imagen */
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
 }
 
-/* Estilo de botones */
+/* Botones */
 button {
-    padding: 10px 20px; /* Padding del botón */
-    background-color: #0073e6; /* Fondo azul */
-    color: white; /* Texto blanco */
-    border: none; /* Sin bordes */
-    border-radius: 5px; /* Bordes redondeados */
-    cursor: pointer; /* Cambiar cursor */
+    padding: 10px 20px;
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 button:hover {
-    background-color: #005bb5; /* Fondo más oscuro al pasar */
+    background-color: #005bb5;
 }
 
-/* Estilo del pie de página */
+/* Pie de página */
 footer {
-    background-color: #0073e6; /* Fondo azul */
-    color: white; /* Texto blanco */
-    text-align: center; /* Texto centrado */
-    padding: 10px; /* Espaciado */
-    width: 100%; /* Ancho completo */
-}
-
-/* Estilos responsivos para pantallas más pequeñas */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 24px; /* Fuente más pequeña en móviles */
-    }
-    nav ul {
-        flex-direction: column; /* Navegación vertical */
-    }
-}
-
-.btn-square-social {
-    width: 70px !important;
-    max-width: 100% !important;
-    max-height: 100% !important;
-    height: 70px !important;
+    background-color: #0073e6;
+    color: white;
     text-align: center;
-    padding: 0px;
-    font-size: 15px;
+    padding: 10px;
 }
 
-.btn-square-social:hover {
-    opacity: 0.8; /* Efecto al pasar el mouse */
+/* Botones sociales */
+.btn-square-social {
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    font-size: 15px;
+    background-color: inherit;
+    border: none;
+}

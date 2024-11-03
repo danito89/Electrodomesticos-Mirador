@@ -92,3 +92,104 @@ footer {
 .btn-square-social:hover {
     opacity: 0.8; /* Opacidad al pasar el ratón */
 }
+button.btn-square-social.btn-facebook {
+    background-color: #3b5998 !important;
+}
+
+button.btn-square-social.btn-instagram {
+    background-color: #ac2bac !important;
+}
+
+button.btn-square-social.btn-whatsapp {
+    background-color: #25d366 !important;
+}
+
+button.btn-square-social.btn-email {
+    background-color: #677319 !important;
+}
+/* Estilo general */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Encabezado */
+header {
+    background-color: #0073e6;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+header h1 {
+    margin: 0;
+}
+
+/* Navegación */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Formulario de contacto */
+.contacto {
+    padding: 20px;
+}
+.formulario-contacto {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 20px;
+}
+.formulario-contacto label {
+    font-weight: bold;
+}
+.formulario-contacto .form-control {
+    margin-bottom: 10px;
+}
+
+/* Botones */
+button {
+    padding: 10px 20px;
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #005bb5;
+}
+
+/* Pie de página */
+footer {
+    background-color: #0073e6;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Botones sociales */
+.btn-square-social {
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    font-size: 15px;
+    background-color: inherit;
+    border: none;
+}
