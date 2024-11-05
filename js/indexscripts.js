@@ -94,7 +94,7 @@ function mostrarProductosDestacados() {
 document.addEventListener('DOMContentLoaded', mostrarProductosDestacados);
 
 
-// Lista de rutas de imágenes en `images/productos/`
+//SLIDER Lista de rutas de imágenes en `images/productos/`
 const imagenesProductos = [
     "images/ofertas/00.png",
     "images/ofertas/01.png",
