@@ -53,10 +53,14 @@ nav ul li a:hover {
 main {
     padding: 20px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos */
 }
+
+/* Tabla de productos */
 table {
-    width: 100%;
+    width: 750px;
+    margin: 0 auto; /* Centra la tabla */
     border-collapse: collapse;
 }
 table th, table td {
@@ -74,7 +78,7 @@ table img {
     object-fit: cover;
 }
 
-/* Botones carrito */
+/* Botones del carrito */
 button {
     padding: 10px 20px;
     background-color: #0073e6;
@@ -96,12 +100,12 @@ footer {
     width: 100%;
 }
 
-/* Botones redes sociales */
+/* Botones de redes sociales */
 .btn-square-social {
     width: 70px !important;
     height: 70px !important;
     border-radius: 50% !important; /* Asegura el borde redondeado */
-    display: inline-flex!important;
+    display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
     font-size: 1.5em !important;
@@ -110,63 +114,77 @@ footer {
     margin: 5px !important;
     cursor: pointer !important;
 }
-
 .btn-square-social.btn-facebook {
     background-color: #3b5998; /* Azul de Facebook */
 }
-
 .btn-square-social.btn-instagram {
     background-color: #ac2bac; /* Magenta de Instagram */
 }
-
 .btn-square-social.btn-whatsapp {
     background-color: #25d366; /* Verde de WhatsApp */
 }
-
-.btn-square-social.btn-email {
-    background-color: #677319; /* Verde oliva para email */
-}
-
 .btn-square-social:hover {
     opacity: 0.8;
 }
-/* Botones redes sociales fin */
 
-
-/*SLIDER BOX*/
+/* Slider Box */
 #slider-box {
-    width: 600px;
-    height: 700px;
-    margin: 50px auto 0;
+    position: relative;
+    width: 750px;
+    height: 220px;
+    margin: 0 auto 0; /* Centrado automático */
     overflow: hidden;
 }
+
 #slider-box ul {
     display: flex;
-    padding: 0px 10px;
-    width: 300%;
-    animation: slide 12s infinite alternate ease-in-out;
+    padding: 0;
+    width: calc(750px * 5); /* Ancho total para 5 imágenes */
+    transition: margin-left 0.5s ease; /* Transición suave al moverse */
 }
+
 #slider-box li {
-    width: 100%;
+    width: 750px; /* Cada imagen ocupará 750px */
     list-style: none;
-    position: relative;   
+    position: relative;
 }
-.texto {
-    position: absolute;
-    text-align: center;
-    padding: 0 250px;
-    bottom: 250px;
-    font-size: 40px;
-    color: black;
-    background: none;
-}
+
 #slider-box img {
-    width: 100%;
-    height: auto;
+    width: 750px;
+    height: 220px;
+    object-fit: contain; /* Muestra la imagen completa dentro del área, ajustándola */
+    background-color: white;
 }
-@keyframes slide {
-    0% { margin-left: 0; }
-    20% { margin-left: 0; }
-    25% { margin-left: -100%; }
-    45% { margin-left: -100%; }
-/*SLIDER BOX FIN*/
+
+/* Botones de Navegación en el Slider */
+#slider-box button {
+    position: absolute;
+    top: 0;
+    height: 100%; /* Hace que el botón ocupe toda la altura del slider */
+    background-color: rgba(0, 0, 0, 0); /* Fondo completamente transparente */
+    color: rgba(255, 255, 255, 0.3); /* Color blanco con mayor transparencia */
+    border: none;
+    width: 50px; /* Ancho del botón */
+    cursor: pointer;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, color 0.3s ease, opacity 0.3s ease; /* Transición suave */
+    z-index: 1;
+    opacity: 0.5; /* Reduce la opacidad del botón en estado normal */
+}
+
+#slider-box button:hover {
+    background-color: rgba(0, 0, 0, 0.3); /* Fondo más visible en hover */
+    color: rgba(255, 255, 255, 0.9); /* Color más blanco en hover */
+    opacity: 1; /* Aumenta la opacidad en hover */
+}
+
+#prev {
+    left: 0;
+}
+
+#next {
+    right: 0;
+}

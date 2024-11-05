@@ -1,8 +1,11 @@
 // Manejador para el cambio de categorías
 document.getElementById('categorias').addEventListener('change', function() {
     const selectedValue = this.value; // Obtiene el valor de la opción seleccionada
-    const sections = document.querySelectorAll('main > section'); // Selecciona todas las secciones de categorías
-    sections.forEach(section => section.classList.add('hidden')); // Oculta todas las secciones
+    
+    // Selecciona todas las secciones de categorías dentro de main, excluyendo el slider-box
+    const sections = document.querySelectorAll('main > section:not(#slider-box)'); 
+    sections.forEach(section => section.classList.add('hidden')); // Oculta todas las secciones excepto el slider-box
+
     if (selectedValue === 'categorias') {
         document.getElementById('productos').classList.remove('hidden'); // Muestra la sección de productos destacados
     } else {
@@ -89,3 +92,61 @@ function mostrarProductosDestacados() {
 
 // Ejecuta mostrarProductosDestacados cuando la página carga
 document.addEventListener('DOMContentLoaded', mostrarProductosDestacados);
+
+
+// Lista de rutas de imágenes en `images/productos/`
+const imagenesProductos = [
+    "images/ofertas/00.png",
+    "images/ofertas/01.png",
+    "images/ofertas/02.png",
+    "images/ofertas/03.png",
+    "images/ofertas/04.png",
+];
+
+let imagenActual = 0; // Índice de la imagen actual
+
+// Función para obtener un número aleatorio de imágenes
+function obtenerImagenesAleatorias(cantidad) {
+    const imagenesSeleccionadas = [];
+    const imagenesCopy = [...imagenesProductos]; // Copia de la lista original
+
+    while (imagenesSeleccionadas.length < cantidad && imagenesCopy.length > 0) {
+        const indexAleatorio = Math.floor(Math.random() * imagenesCopy.length);
+        imagenesSeleccionadas.push(imagenesCopy.splice(indexAleatorio, 1)[0]);
+    }
+    return imagenesSeleccionadas;
+}
+
+// Función para mostrar las imágenes en el slider
+function mostrarSliderAleatorio() {
+    const sliderBox = document.querySelector('#slider-box ul');
+    sliderBox.innerHTML = ''; // Limpiar el contenido actual
+
+    const imagenesAleatorias = obtenerImagenesAleatorias(5); // Selecciona siempre 5 imágenes
+    imagenesAleatorias.forEach(imagen => {
+        const li = document.createElement('li');
+        li.innerHTML = `<img src="${imagen}" alt="Imagen aleatoria">`;
+        sliderBox.appendChild(li);
+    });
+
+    // Reinicia la posición del carrusel al cargar las imágenes
+    imagenActual = 0;
+    sliderBox.style.marginLeft = '0';
+}
+
+// Función para mover adelante en el slider
+function moverAdelante() {
+    const sliderBox = document.querySelector('#slider-box ul');
+    imagenActual = (imagenActual + 1) % 5; // Avanza y vuelve al inicio al llegar al final
+    sliderBox.style.marginLeft = `-${imagenActual * 750}px`; // Ajusta el desplazamiento
+}
+
+// Función para mover atrás en el slider
+function moverAtras() {
+    const sliderBox = document.querySelector('#slider-box ul');
+    imagenActual = (imagenActual - 1 + 5) % 5; // Retrocede y va al final si está en la primera
+    sliderBox.style.marginLeft = `-${imagenActual * 750}px`; // Ajusta el desplazamiento
+}
+
+// Llamada para mostrar el slider aleatorio al cargar la página
+document.addEventListener('DOMContentLoaded', mostrarSliderAleatorio);
