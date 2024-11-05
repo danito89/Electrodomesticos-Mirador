@@ -139,6 +139,7 @@ function moverAdelante() {
     const sliderBox = document.querySelector('#slider-box ul');
     imagenActual = (imagenActual + 1) % 5; // Avanza y vuelve al inicio al llegar al final
     sliderBox.style.marginLeft = `-${imagenActual * 750}px`; // Ajusta el desplazamiento
+    console.log("Slider movido a la posición:", imagenActual); // Verificación de movimiento
 }
 
 // Función para mover atrás en el slider
@@ -149,4 +150,21 @@ function moverAtras() {
 }
 
 // Llamada para mostrar el slider aleatorio al cargar la página
-document.addEventListener('DOMContentLoaded', mostrarSliderAleatorio);
+document.addEventListener('DOMContentLoaded', () => {
+    mostrarSliderAleatorio();
+
+    // INICIO Ajuste para el movimiento automático y vinculación de botones
+    // Vincula los botones de navegación
+    const botonAdelante = document.querySelector('#next');
+    const botonAtras = document.querySelector('#prev');
+
+    botonAdelante.addEventListener('click', moverAdelante);
+    botonAtras.addEventListener('click', moverAtras);
+
+    // Movimiento automático del slider cada 3 segundos
+    setInterval(() => {
+        console.log("Intentando mover el slider automáticamente"); // Mensaje de prueba
+        moverAdelante();
+    }, 3000);
+    // FIN Ajuste para el movimiento automático y vinculación de botones
+});
