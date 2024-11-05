@@ -74,7 +74,7 @@ table img {
     object-fit: cover;
 }
 
-/* Botones */
+/* Botones carrito */
 button {
     padding: 10px 20px;
     background-color: #0073e6;
@@ -96,7 +96,7 @@ footer {
     width: 100%;
 }
 
-/* Botones sociales */
+/* Botones redes sociales */
 .btn-square-social {
     width: 70px !important;
     height: 70px !important;
@@ -130,3 +130,43 @@ footer {
 .btn-square-social:hover {
     opacity: 0.8;
 }
+/* Botones redes sociales fin */
+
+
+/*SLIDER BOX*/
+#slider-box {
+    width: 600px;
+    height: 700px;
+    margin: 50px auto 0;
+    overflow: hidden;
+}
+#slider-box ul {
+    display: flex;
+    padding: 0px 10px;
+    width: 300%;
+    animation: slide 12s infinite alternate ease-in-out;
+}
+#slider-box li {
+    width: 100%;
+    list-style: none;
+    position: relative;   
+}
+.texto {
+    position: absolute;
+    text-align: center;
+    padding: 0 250px;
+    bottom: 250px;
+    font-size: 40px;
+    color: black;
+    background: none;
+}
+#slider-box img {
+    width: 100%;
+    height: auto;
+}
+@keyframes slide {
+    0% { margin-left: 0; }
+    20% { margin-left: 0; }
+    25% { margin-left: -100%; }
+    45% { margin-left: -100%; }
+/*SLIDER BOX FIN*/
