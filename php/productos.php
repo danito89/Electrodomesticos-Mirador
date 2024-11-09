@@ -1,10 +1,21 @@
 <?php
 include 'conexion.php';
 
-$query = $pdo->query("SELECT * FROM productos"); //
-$productos = $query->fetchAll(PDO::FETCH_ASSOC);
-?>
+try {
+    // Consulta para obtener todos los productos
+    $query = $pdo->query("SELECT * FROM productos");
+    $productos = $query->fetchAll(PDO::FETCH_ASSOC);
 
+    // Convertir el resultado en JSON y devolverlo
+    header('Content-Type: application/json');
+    echo json_encode($productos);
+
+} catch (Exception $e) {
+    // Manejo de errores en caso de fallo en la consulta
+    echo json_encode(["error" => "Error al obtener los productos: " . $e->getMessage()]);
+}
+
+/* lo siguiente no serviria
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -31,3 +42,5 @@ $productos = $query->fetchAll(PDO::FETCH_ASSOC);
     </table>
 </body>
 </html>
+*/
+?>

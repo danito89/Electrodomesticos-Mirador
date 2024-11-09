@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<!-- Configuración básica del documento -->
+    <!-- Configuración básica del documento -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="images/favicon.webp">
@@ -13,45 +13,46 @@
     </style>
 </head>
 <body>
-<!-- Inicio del encabezado -->
+    <!-- Inicio del encabezado -->
     <header>
         <div class="container">
             <h1 class="text-center">Electrodomésticos Mirador</h1>
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
-<!-- Menú de navegación -->
+                    <!-- Menú de navegación -->
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="#" onclick="location.reload();">Inicio</a></li> <!-- actualiza la pagina sin redirigir -->
+                        <li class="nav-item"><a class="nav-link" href="#" onclick="location.reload();">Inicio</a></li>
                         <li class="nav-item"><a class="nav-link" href="paginas/contacto.html">Contacto</a></li>
-                        <li class="nav-item"> <a href="paginas/login.html">Iniciar Sesion / Registrarse</a></li>
+                        <li class="nav-item"><a href="paginas/login.html">Iniciar Sesion / Registrarse</a></li>
                     </ul>
-<!-- Selección de categorías -->
+                    <!-- Selección de categorías -->
                     <select class="form-select" name="categorias" id="categorias">
                         <option value="categorias">CATEGORIAS</option>
-                        <option value="celulares">CELULARES</option>
-                        <option value="computacion">COMPUTACION</option>
-                        <option value="Consolas y Juegos">CONSOLAS Y JUEGOS</option>
-                        <option value="smart-tv">SMART-TV</option>
-                        <option value="climatizacion">CLIMATIZACION</option>
-                        <option value="cocina">COCINA</option>
-                        <option value="heladeras-frezzers">HELADERAS-FREZZERS</option>
+                        <option value="Celulares">CELULARES</option>
+                        <option value="Computadoras">COMPUTADORAS</option>
+                        <option value="Consolas">CONSOLAS</option>
+                        <option value="Televisores">SMART-TV</option>
+                        <option value="Climatización">CLIMATIZACION</option>
+                        <option value="Cocina">COCINA</option>
+                        <option value="Heladeras">HELADERAS Y FREEZERS</option>
                     </select> 
                 </div>
             </nav>
         </div>
     </header>
-<!-- Fin del encabezado -->
+    <!-- Fin del encabezado -->
     
-<!-- Inicio del contenido principal -->
+    <!-- Inicio del contenido principal -->
     <main>
-<!-- INICIO SLIDERBOX -->
-<section id="slider-box">
-    <button id="prev" onclick="moverAtras()">⬅️</button>
-    <ul></ul> <!-- las imagenes las va a tomar desde js/indexscripts.js -->
-    <button id="next" onclick="moverAdelante()">➡️</button>
-</section>
-<!-- FIN DE SLIDERBOX -->
-<!-- Sección de productos destacados -->
+        <!-- INICIO SLIDERBOX -->
+        <section id="slider-box">
+            <button id="prev" onclick="moverAtras()">⬅️</button>
+            <ul></ul> <!-- las imagenes las va a tomar desde js/indexscripts.js -->
+            <button id="next" onclick="moverAdelante()">➡️</button>
+        </section>
+        <!-- FIN DE SLIDERBOX -->
+        
+        <!-- Sección de productos destacados -->
         <section id="productos" class="container my-4">
             <div class="row">
                 <div class="col-md-6 col-12">
@@ -62,16 +63,16 @@
                             </tr>
                         </thead>
                         <tbody>
-<!-- Lista de productos <script src="./js/indexscripts.js"></script> -->
+                            <!-- Lista de productos generada por JavaScript -->
                         </tbody>
                     </table>
                 </div>
             </div>
         </section>
-<!-- Fin de la sección de productos destacados -->
+        <!-- Fin de la sección de productos destacados -->
 
-<!-- Secciones para cada categoría -->
-        <section id="celulares" class="hidden">
+        <!-- Secciones para cada categoría (contenidos generados dinámicamente) -->
+        <section id="Celulares" class="hidden">
             <div class="row">
                 <div class="col-md-6 col-12">
                     <table class="table table-striped">
@@ -80,45 +81,13 @@
                                 <th colspan="4">Celulares Destacados</th>
                             </tr>
                         </thead>
-                        <tbody>
-<!-- Lista de CELULARES -->
-                            <tr>
-                                <td><img src="images/productos/CELULARES/Celular Xiaomi Redmi 13C/01.png" alt="Producto 1" class="img-fluid"></td>
-                                <td>Celular Xiaomi Redmi 13C 6.74" 128GB Negro</td>
-                                <td>$ 411.770</td>
-                                <td><button class="btn btn-primary">Añadir al Carrito</button></td>
-                            </tr>
-                            <tr>
-                                <td><img src="images/productos/CELULARES/Celular Samsung A05/01.jpg" alt="Producto 2" class="img-fluid"></td>
-                                <td>Celular Samsung A05 6.7" 64GB Plata</td>
-                                <td>$ 239.979</td>
-                                <td><button class="btn btn-primary">Añadir al Carrito</button></td>
-                            </tr>
-                            <tr>
-                                <td><img src="images/productos/CELULARES/Celular Samsung A15/01.png" alt="Producto 3" class="img-fluid"></td>
-                                <td>Celular Samsung A15 6.5" 128GB Black Blue</td>
-                                <td>$ 349.999</td>
-                                <td><button class="btn btn-primary">Añadir al Carrito</button></td>
-                            </tr>
-                            <tr>
-                                <td><img src="images/productos/CELULARES/Celular Motorola G24/01.png" alt="Producto 4" class="img-fluid"></td>
-                                <td>Celular Motorola G24 6.6" 128GB Gris</td>
-                                <td>$ 369.899</td>
-                                <td><button class="btn btn-primary">Añadir al Carrito</button></td>
-                            </tr>
-                            <tr>
-                                <td><img src="images/productos/CELULARES/Celular Xiaomi Redmi A3/01.jpg" alt="Producto 5" class="img-fluid"></td>
-                                <td>Celular Xiaomi Redmi A3 6.71 64GB Azul</td>
-                                <td>$ 199.989</td>
-                                <td><button class="btn btn-primary">Añadir al Carrito</button></td>
-                            </tr>
-<!-- Fin de la lista de CELULARES -->
-                        </tbody>
+                        <tbody></tbody> <!-- Lista de CELULARES generada por JavaScript -->
                     </table>
                 </div>
             </div>
         </section>
-        <section id="computacion" class="hidden">
+
+        <section id="Computadoras" class="hidden">
             <div class="row">
                 <div class="col-md-6 col-12">
                     <table class="table table-striped">
@@ -127,90 +96,28 @@
                                 <th colspan="4">Computadoras Destacadas</th>
                             </tr>
                         </thead>
-                        <tbody>
-<!-- Lista de COMPUS -->
-                            <tr>
-                                <td><img src="images/productos/COMPUTACION/Computadora Gamer Gfast X-501/01.jpg" alt="Producto 1" class="img-fluid"></td>
-                                <td>Computadora Gamer Gfast X-501 Rooki Intel Core I5 16GB/240GB</td>
-                                <td>$ 972.630</td>
-                                <td><button class="btn btn-primary">Añadir al Carrito</button></td>
-                            </tr>
-                            <tr>
-                                <td><img src="images/productos/COMPUTACION/Computadora Gfast H-350 Intel Core I3 Slim/01.png" alt="Producto 2" class="img-fluid"></td>
-                                <td>Computadora Gfast H-350 Intel Core I3 Slim</td>
-                                <td>$ 742.580</td>
-                                <td><button class="btn btn-primary">Añadir al Carrito</button></td>
-                            </tr>
-                            <tr>
-                                <td><img src="images/productos/COMPUTACION/Pc Aio Lenovo IC3 24IAP7/01.jpg" alt="Producto 3" class="img-fluid"></td>
-                                <td>Pc Aio Lenovo IC3 24IAP7 23.8" Intel Core I5 12GB/512GB</td>
-                                <td>$ 1.476.600</td>
-                                <td><button class="btn btn-primary">Añadir al Carrito</button></td>
-                            </tr>
-                            <tr>
-                                <td><img src="images/productos/COMPUTACION/Notebook Lenovo LOQ15ARP9 Gamer R7/01.jpg" alt="Producto 4" class="img-fluid"></td>
-                                <td>Notebook Lenovo LOQ15ARP9 Gamer R7 15.6" 24GB/512GB</td>
-                                <td>$ 2.302.899</td>
-                                <td><button class="btn btn-primary">Añadir al Carrito</button></td>
-                            </tr>
-                            <tr>
-                                <td><img src="images/productos/COMPUTACION/Notebook HP 255-G10 Ryzer 7/01.jpg" alt="Producto 5" class="img-fluid"></td>
-                                <td>Notebook HP 255-G10 Ryzer 7 15.6" 16GB/512GB</td>
-                                <td>$ 1.562.200</td>
-                                <td><button class="btn btn-primary">Añadir al Carrito</button></td>
-                            </tr>
-<!-- Fin de la lista de COMPUS -->
-                        </tbody>
+                        <tbody></tbody> <!-- Lista de COMPUTADORAS generada por JavaScript -->
                     </table>
                 </div>
+            </div>
         </section>
-        <section id="Consolas y Juegos" class="hidden">
+
+        <section id="Consolas" class="hidden">
             <div class="row">
                 <div class="col-md-6 col-12">
                     <table class="table table-striped">
                         <thead>
                             <tr>
-                                <th colspan="4">CONSOLAS Destacadas</th>
+                                <th colspan="4">Consolas Destacadas</th>
                             </tr>
                         </thead>
-                        <tbody>
-<!-- Lista de CONSOLAS -->
-                            <tr>
-                                <td><img src="images/productos/CONSOLAS/Consola Sony Playstation 5/01.jpg" alt="Producto 1" class="img-fluid"></td>
-                                <td>Consola Sony Playstation 5 1TB Digital + 2 Juegos</td>
-                                <td>$ 1.647.060</td>
-                                <td><button class="btn btn-primary">Añadir al Carrito</button></td>
-                            </tr>
-                            <tr>
-                                <td><img src="images/productos/CONSOLAS/Consola Xbox Series S/01.jpg" alt="Producto 2" class="img-fluid"></td>
-                                <td>Consola Xbox Series S 512GB Ssd Digital</td>
-                                <td>$ 954.440</td>
-                                <td><button class="btn btn-primary">Añadir al Carrito</button></td>
-                            </tr>
-                            <tr>
-                                <td><img src="images/productos/CONSOLAS/Consola Video Juego Level Up Retro Nes HDMI 500 Juegos/01.png" alt="Producto 3" class="img-fluid"></td>
-                                <td>Consola Video Juego Level Up Retro Nes HDMI 500 Juegos</td>
-                                <td>$ 56.174</td>
-                                <td><button class="btn btn-primary">Añadir al Carrito</button></td>
-                            </tr>
-                            <tr>
-                                <td><img src="images/productos/CONSOLAS/Consola Retro Kanji KJ-START/01.jpg" alt="Producto 4" class="img-fluid"></td>
-                                <td>Consola Retro Kanji KJ-START 145 Juegos</td>
-                                <td>$ 38.733</td>
-                                <td><button class="btn btn-primary">Añadir al Carrito</button></td>
-                            </tr>
-                            <tr>
-                                <td><img src="images/productos/COMPUTACION/Notebook HP 255-G10 Ryzer 7/01.jpg" alt="Producto 5" class="img-fluid"></td>
-                                <td>Consola Kanji KJ-Pocket 400 Juegos Portátil</td>
-                                <td>$ 38.309</td>
-                                <td><button class="btn btn-primary">Añadir al Carrito</button></td>
-                            </tr>
-<!-- Fin de la lista de CONSOLAS -->
-                        </tbody>
+                        <tbody></tbody> <!-- Lista de CONSOLAS generada por JavaScript -->
                     </table>
                 </div>
+            </div>
         </section>
-        <section id="smart-tv" class="hidden">
+
+        <section id="Televisores" class="hidden">
             <div class="row">
                 <div class="col-md-6 col-12">
                     <table class="table table-striped">
@@ -219,44 +126,13 @@
                                 <th colspan="4">Televisores Destacados</th>
                             </tr>
                         </thead>
-                        <tbody>
-<!-- Lista de COMPUS -->
-                            <tr>
-                                <td><img src="images/productos/SMARTTV/Smart Tv Philips 32/01.jpg" alt="Producto 1" class="img-fluid"></td>
-                                <td>Smart Tv Philips 32" 32PHD6918 HD Google Tv</td>
-                                <td>$ 410.490</td>
-                                <td><button class="btn btn-primary">Añadir al Carrito</button></td>
-                            </tr>
-                            <tr>
-                                <td><img src="images/productos/SMARTTV/Smart Tv Samsung 32/01.png" alt="Producto 2" class="img-fluid"></td>
-                                <td>Smart Tv Samsung 32" UN32T4300AGCZB HD</td>
-                                <td>$ 395.900</td>
-                                <td><button class="btn btn-primary">Añadir al Carrito</button></td>
-                            </tr>
-                            <tr>
-                                <td><img src="images/productos/SMARTTV/Smart Tv LG 32/01.jpg" alt="Producto 3" class="img-fluid"></td>
-                                <td>Smart Tv LG 32" 9132LQ630BPSA HD WebOS</td>
-                                <td>$ 426.930</td>
-                                <td><button class="btn btn-primary">Añadir al Carrito</button></td>
-                            </tr>
-                            <tr>
-                                <td><img src="images/productos/SMARTTV/Smart Tv Noblex 32/01.jpg" alt="Producto 4" class="img-fluid"></td>
-                                <td>Smart Tv Noblex 32" 91DR32X7050 HD Android Tv</td>
-                                <td>$ 470.780</td>
-                                <td><button class="btn btn-primary">Añadir al Carrito</button></td>
-                            </tr>
-                            <tr>
-                                <td><img src="images/productos/SMARTTV/Smart Tv Rca 32/01.jpg" alt="Producto 5" class="img-fluid"></td>
-                                <td>Smart Tv Rca 32" C32AND Android Tv</td>
-                                <td>$ 331.700</td>
-                                <td><button class="btn btn-primary">Añadir al Carrito</button></td>
-                            </tr>
-<!-- Fin de la lista de COMPUS -->
-                        </tbody>
+                        <tbody></tbody> <!-- Lista de SMART-TV generada por JavaScript -->
                     </table>
                 </div>
+            </div>
         </section>
-        <section id="climatizacion" class="hidden">
+
+        <section id="Climatización" class="hidden">
             <div class="row">
                 <div class="col-md-6 col-12">
                     <table class="table table-striped">
@@ -265,44 +141,13 @@
                                 <th colspan="4">Climatización Destacados</th>
                             </tr>
                         </thead>
-                        <tbody>
-<!-- Lista de COMPUS -->
-                            <tr>
-                                <td><img src="images/productos/CLIMATIZACION/Aire Acondicionado Split Electra/01.png" alt="Producto 1" class="img-fluid"></td>
-                                <td>Aire Acondicionado Split Electra ENTRDO32TC 3200WTS f/c</td>
-                                <td>$ 862.420</td>
-                                <td><button class="btn btn-primary">Añadir al Carrito</button></td>
-                            </tr>
-                            <tr>
-                                <td><img src="images/productos/CLIMATIZACION/Aire Acondicionado Split Hyundai/01.png" alt="Producto 2" class="img-fluid"></td>
-                                <td>Aire Acondicionado Split Hyundai HY11INV 3200Watts f/c Inverter</td>
-                                <td>$ 1.465.010</td>
-                                <td><button class="btn btn-primary">Añadir al Carrito</button></td>
-                            </tr>
-                            <tr>
-                                <td><img src="images/productos/CLIMATIZACION/Ventilador Liliana VPRN20 20 90 Watts/01.png" alt="Producto 3" class="img-fluid"></td>
-                                <td>Ventilador Liliana VPRN20 20" 90 Watts</td>
-                                <td>$ 138.360</td>
-                                <td><button class="btn btn-primary">Añadir al Carrito</button></td>
-                            </tr>
-                            <tr>
-                                <td><img src="images/productos/CLIMATIZACION/Climatizador de Aire Midea/01.jpeg" alt="Producto 4" class="img-fluid"></td>
-                                <td>Climatizador de Aire Midea MCC/12 Frío C/Remoto 10Lts</td>
-                                <td>$ 190.460</td>
-                                <td><button class="btn btn-primary">Añadir al Carrito</button></td>
-                            </tr>
-                            <tr>
-                                <td><img src="images/productos/CLIMATIZACION/Caloventor Eiffel E543 2000Watts Vertical/01.jpg" alt="Producto 5" class="img-fluid"></td>
-                                <td>Caloventor Eiffel E543 2000Watts Vertical</td>
-                                <td>$ 34.106</td>
-                                <td><button class="btn btn-primary">Añadir al Carrito</button></td>
-                            </tr>
-<!-- Fin de la lista de COMPUS -->
-                        </tbody>
+                        <tbody></tbody> <!-- Lista de CLIMATIZACION generada por JavaScript -->
                     </table>
                 </div>
+            </div>
         </section>
-        <section id="cocina" class="hidden">
+
+        <section id="Cocina" class="hidden">
             <div class="row">
                 <div class="col-md-6 col-12">
                     <table class="table table-striped">
@@ -311,93 +156,30 @@
                                 <th colspan="4">Cocina Destacados</th>
                             </tr>
                         </thead>
-                        <tbody>
-<!-- Lista de COCINA -->
-                            <tr>
-                                <td><img src="images/productos/COCINA/Cocina Morelli/01.png" alt="Producto 1" class="img-fluid"></td>
-                                <td>Cocina Morelli 018027P Aceo Inoxidable 60CM</td>
-                                <td>$ 842.624</td>
-                                <td><button class="btn btn-primary">Añadir al Carrito</button></td>
-                            </tr>
-                            <tr>
-                                <td><img src="images/productos/COCINA/Cocina Usman/01.png" alt="Producto 2" class="img-fluid"></td>
-                                <td>Cocina Usman Carliplancha Mod 992 Gas Natural 85Cm</td>
-                                <td>$ 902.499</td>
-                                <td><button class="btn btn-primary">Añadir al Carrito</button></td>
-                            </tr>
-                            <tr>
-                                <td><img src="images/productos/COCINA/Horno Eléctrico Enova/01.jpg" alt="Producto 3" class="img-fluid"></td>
-                                <td>Horno Eléctrico Enova HE3510-AI 35Lts 1500Watts C/Espiedo</td>
-                                <td>$ 150.870</td>
-                                <td><button class="btn btn-primary">Añadir al Carrito</button></td>
-                            </tr>
-                            <tr>
-                                <td><img src="images/productos/COCINA/Microondas Whirlpool/01.jpg" alt="Producto 4" class="img-fluid"></td>
-                                <td>Microondas Whirlpool MCP346SL 25Lts 800Watts</td>
-                                <td>$ 488.990</td>
-                                <td><button class="btn btn-primary">Añadir al Carrito</button></td>
-                            </tr>
-                            <tr>
-                                <td><img src="images/productos/COCINA/Microondas Daewoo/01.jpg" alt="Producto 5" class="img-fluid"></td>
-                                <td>Microondas Daewoo 120DS20 20Lts Digital Blanco</td>
-                                <td>$ 234.330</td>
-                                <td><button class="btn btn-primary">Añadir al Carrito</button></td>
-                            </tr>
-<!-- Fin de la lista de COCINA -->
-                        </tbody>
+                        <tbody></tbody> <!-- Lista de COCINA generada por JavaScript -->
                     </table>
                 </div>
+            </div>
         </section>
-        <section id="heladeras-frezzers" class="hidden">
+
+        <section id="Heladeras" class="hidden">
             <div class="row">
                 <div class="col-md-6 col-12">
                     <table class="table table-striped">
                         <thead>
                             <tr>
-                                <th colspan="4">Heladeras y Frezzers Destacados</th>
+                                <th colspan="4">Heladeras y Freezers Destacados</th>
                             </tr>
                         </thead>
-                        <tbody>
-<!-- Lista de HELADERAS Y FREZZERS -->
-                            <tr>
-                                <td><img src="images/productos/HELADERAS/Heladera Cíclica Gafa/01.jpg" alt="Producto 1" class="img-fluid"></td>
-                                <td>Heladera Cíclica Gafa HGF358AFB 282Lts</td>
-                                <td>$ 826.040</td>
-                                <td><button class="btn btn-primary">Añadir al Carrito</button></td>
-                            </tr>
-                            <tr>
-                                <td><img src="images/productos/HELADERAS/Freezer Gafa/01.jpg" alt="Producto 2" class="img-fluid"></td>
-                                <td>Freezer Gafa FGHI300B/L 280Lts Inverter</td>
-                                <td>$ 888.100</td>
-                                <td><button class="btn btn-primary">Añadir al Carrito</button></td>
-                            </tr>
-                            <tr>
-                                <td><img src="images/productos/HELADERAS/Heladera Cíclica Neba/01.png" alt="Producto 3" class="img-fluid"></td>
-                                <td>Heladera Cíclica Neba A280 280Lts</td>
-                                <td>$ 616.320</td>
-                                <td><button class="btn btn-primary">Añadir al Carrito</button></td>
-                            </tr>
-                            <tr>
-                                <td><img src="images/productos/HELADERAS/Heladera No Frost Samsung/01.png" alt="Producto 4" class="img-fluid"></td>
-                                <td>Heladera No Frost Samsung RT32 330Lts Inverter</td>
-                                <td>$ 1.284.000</td>
-                                <td><button class="btn btn-primary">Añadir al Carrito</button></td>
-                            </tr>
-                            <tr>
-                                <td><img src="images/productos/HELADERAS/Freezer Briket/01.jpg" alt="Producto 5" class="img-fluid"></td>
-                                <td>Freezer Briket FR3300 295Lts</td>
-                                <td>$ 732.950</td>
-                                <td><button class="btn btn-primary">Añadir al Carrito</button></td>
-                            </tr>
-<!-- Fin de la lista de HELADERAS Y FREZZERS -->
-                        </tbody>
+                        <tbody></tbody> <!-- Lista de HELADERAS Y FREEZERS generada por JavaScript -->
                     </table>
                 </div>
-        </section>     
+            </div>
+        </section>
     </main>
-<!-- Fin del contenido principal -->
+    <!-- Fin del contenido principal -->
     
-<!-- Inicio del pie de página -->
+    <!-- Inicio del pie de página -->
     <footer class="text-center my-4">
         <div class="social-links mb-3">
             <h3>Síguenos en:</h3>
@@ -418,10 +200,10 @@
         </div>
         <p>&copy; 2024 Electrodomésticos Mirador. Todos los derechos reservados.</p>
     </footer>
-<!-- Fin del pie de página -->
+    <!-- Fin del pie de página -->
     
-<!-- Archivo de Javascript -->
-<script src="./js/indexscripts.js"></script>
+    <!-- Archivo de Javascript -->
+    <script src="./js/indexscripts.js"></script>
 
 </body>
 </html>
