@@ -7,16 +7,13 @@
     <link rel="stylesheet" href="../css/formstyles.css">
 </head>
 <body>
-
 <!-- los datos se tienen que enviar al formularo php -->
-    <form action="php/formulario.php" method="post">
+    <form action="../php/formulario.php" method="post">
         <table>
 <!-- Título en una sola celda usando "colspan" -->
             <tr>
                 <th colspan="2"><h1>Encuesta de Satisfacción</h1></th> <!-- th = tablehead celda de encabezado-->
             </tr>
-
-
 <!-- Datos personales -->
             <tr> <!-- tr = tablerow fila-->
                 <td><label>Nombre:</label></td><!-- td = tabledata celda-->
@@ -38,9 +35,6 @@
                 <td><label for="fecha_compra">Fecha de compra:</label></td>
                 <td><input type="date" id="fecha_compra" name="fecha_compra" required></td>
             </tr>
-<!-- Fin Datos personales -->
-
-
 <!-- Sección de satisfacción -->
             <tr>
                 <td><label>¿Cómo calificaría la atención recibida?</label></td>
@@ -74,7 +68,6 @@
                     <input type="text" name="otro_medio" placeholder="Indique cual" >
                 </td>
             </tr>
-
 <!-- Sección de suscripción -->
             <tr>
                 <td><label>¿Quiere suscribirse a nuestro boletín de ofertas?</label></td>
@@ -86,8 +79,6 @@
                     <label>No</label>
                 </td>
             </tr>
-
-
 <!-- Botón para enviar -->
             <tr>
                 <td colspan="2" style="text-align: center;">
@@ -96,7 +87,5 @@
             </tr>
         </table>
     </form>
-
-
 </body>
 </html>
