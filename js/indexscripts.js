@@ -36,11 +36,14 @@ async function mostrarProductosDestacados() {
     const tbody = document.querySelector('#productos tbody');
     tbody.innerHTML = '';
     productosAleatorios.forEach(producto => {
+        // Formatear el precio
+        const precioFormateado = `$ ${parseFloat(producto.PRECIO).toFixed(2).replace('.', ',')}`;
+
         const row = document.createElement('tr');
         row.innerHTML = `
             <td><img src="${producto.imagen}" alt="${producto.NOMBRE_PRODUCTO}" class="img-fluid"></td>
             <td>${producto.NOMBRE_PRODUCTO}</td>
-            <td>${producto.PRECIO}</td>
+            <td>${precioFormateado}</td>
             <td><button class="btn btn-primary">Añadir al Carrito</button></td>
         `;
         tbody.appendChild(row);
@@ -63,16 +66,20 @@ async function cargarProductosPorCategoria(categoria) {
 
     tbody.innerHTML = '';
     productosFiltrados.forEach(producto => {
+        // Formatear el precio
+        const precioFormateado = `$ ${parseFloat(producto.PRECIO).toFixed(2).replace('.', ',')}`;
+
         const row = document.createElement('tr');
         row.innerHTML = `
             <td><img src="${producto.imagen}" alt="${producto.NOMBRE_PRODUCTO}" class="img-fluid"></td>
             <td>${producto.NOMBRE_PRODUCTO}</td>
-            <td>${producto.PRECIO}</td>
+            <td>${precioFormateado}</td>
             <td><button class="btn btn-primary">Añadir al Carrito</button></td>
         `;
         tbody.appendChild(row);
     });
 }
+
 
 // Ejecuta mostrarProductosDestacados cuando la página carga
 document.addEventListener('DOMContentLoaded', mostrarProductosDestacados);
