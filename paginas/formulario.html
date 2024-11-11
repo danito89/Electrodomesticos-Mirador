@@ -7,79 +7,79 @@
     <link rel="stylesheet" href="../css/formstyles.css">
 </head>
 <body>
-<!-- los datos se tienen que enviar al formularo php -->
+    <!-- los datos se tienen que enviar al formularo php -->
     <form action="../php/formulario.php" method="post">
         <table>
-<!-- Título en una sola celda usando "colspan" -->
+            <!-- Título en una sola celda usando "colspan" -->
             <tr>
                 <th colspan="2"><h1>Encuesta de Satisfacción</h1></th> <!-- th = tablehead celda de encabezado-->
             </tr>
-<!-- Datos personales -->
+            <!-- Datos personales -->
             <tr> <!-- tr = tablerow fila-->
-                <td><label>Nombre:</label></td><!-- td = tabledata celda-->
-                <td><input type="text" name="nombre" placeholder="Ingrese su nombre..." required></td>
+                <td><label for="nombre">Nombre:</label></td><!-- td = tabledata celda-->
+                <td><input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre..." required></td>
             </tr>
             <tr>
-                <td><label>Apellido:</label></td>
-                <td><input type="text" name="apellido" placeholder="Ingrese su apellido..." required></td>
+                <td><label for="apellido">Apellido:</label></td>
+                <td><input type="text" id="apellido" name="apellido" placeholder="Ingrese su apellido..." required></td>
             </tr>
             <tr>
-                <td><label>Email:</label></td>
-                <td><input type="email" name="email" placeholder="Ingrese su email..." required></td>
+                <td><label for="email">Email:</label></td>
+                <td><input type="email" id="email" name="email" placeholder="Ingrese su email..." required></td>
             </tr>
             <tr>
-                <td><label>Producto adquirido:</label></td>
-                <td><input type="text" name="producto" placeholder="Ingrese el nombre del electrodoméstico..." required></td>
+                <td><label for="producto">Producto adquirido:</label></td>
+                <td><input type="text" id="producto" name="producto" placeholder="Ingrese el nombre del electrodoméstico..." required></td>
             </tr>
             <tr>
                 <td><label for="fecha_compra">Fecha de compra:</label></td>
                 <td><input type="date" id="fecha_compra" name="fecha_compra" required></td>
             </tr>
-<!-- Sección de satisfacción -->
+            <!-- Sección de satisfacción -->
             <tr>
                 <td><label>¿Cómo calificaría la atención recibida?</label></td>
                 <td>
                     <!-- opciones utilizando "radio" para que solo se elija una -->
-                    <input type="radio" name="satisfaccion" value="1 - Muy insatisfecho" required>
-                    <label>1 - Muy insatisfecho</label><br>
-                    <input type="radio" name="satisfaccion" value="2 - Insatisfecho">
-                    <label>2 - Insatisfecho</label><br>
-                    <input type="radio" name="satisfaccion" value="3 - Neutral">
-                    <label>3 - Neutral</label><br>
-                    <input type="radio" name="satisfaccion" value="4 - Satisfecho">
-                    <label>4 - Satisfecho</label><br>
-                    <input type="radio" name="satisfaccion" value="5 - Muy satisfecho">
-                    <label>5 - Muy satisfecho</label>
+                    <input type="radio" id="satisfaccion1" name="satisfaccion" value="1 - Muy insatisfecho" required>
+                    <label for="satisfaccion1">1 - Muy insatisfecho</label><br>
+                    <input type="radio" id="satisfaccion2" name="satisfaccion" value="2 - Insatisfecho">
+                    <label for="satisfaccion2">2 - Insatisfecho</label><br>
+                    <input type="radio" id="satisfaccion3" name="satisfaccion" value="3 - Neutral">
+                    <label for="satisfaccion3">3 - Neutral</label><br>
+                    <input type="radio" id="satisfaccion4" name="satisfaccion" value="4 - Satisfecho">
+                    <label for="satisfaccion4">4 - Satisfecho</label><br>
+                    <input type="radio" id="satisfaccion5" name="satisfaccion" value="5 - Muy satisfecho">
+                    <label for="satisfaccion5">5 - Muy satisfecho</label>
                 </td>
             </tr>
-<!-- Medio de conocimiento -->
+            <!-- Medio de conocimiento -->
             <tr>
                 <td><label>¿Por qué medio nos encontró/conoció?</label></td>
                 <td>
                     <!-- opciones utilizando "radio" para que solo se elija una -->
-                    <input type="radio" name="medio" value="Redes sociales">
-                    <label>Redes sociales</label><br>
-                    <input type="radio" name="medio" value="Recomendación de un amigo">
-                    <label>Recomendación de un amigo</label><br>
-                    <input type="radio" name="medio" value="Publicidad en internet">
-                    <label>Publicidad en internet</label><br>
-                    <input type="radio" name="medio" value="Otro">
-                    <label>Otro</label>
+                    <input type="radio" id="medio1" name="medio" value="Redes sociales">
+                    <label for="medio1">Redes sociales</label><br>
+                    <input type="radio" id="medio2" name="medio" value="Recomendación de un amigo">
+                    <label for="medio2">Recomendación de un amigo</label><br>
+                    <input type="radio" id="medio3" name="medio" value="Publicidad en internet">
+                    <label for="medio3">Publicidad en internet</label><br>
+                    <input type="radio" id="medio4" name="medio" value="Otro">
+                    <label for="medio4">Otro</label>
                     <input type="text" name="otro_medio" placeholder="Indique cual" >
                 </td>
             </tr>
-<!-- Sección de suscripción -->
+            <!-- Sección de suscripción -->
             <tr>
                 <td><label>¿Quiere suscribirse a nuestro boletín de ofertas?</label></td>
                 <td>
                     <!-- Opciones -->
-                    <input type="radio" name="suscribirse" value="Sí" required>
-                    <label>Sí</label><br>
-                    <input type="radio" name="suscribirse" value="No">
-                    <label>No</label>
+                    <input type="radio" id="suscribirse_si" name="suscribirse" value="Sí" required>
+                    <label for="suscribirse_si">Sí</label><br>
+                    <input type="radio" id="suscribirse_no" name="suscribirse" value="No">
+                    <label for="suscribirse_no">No</label>
                 </td>
             </tr>
-<!-- Botón para enviar -->
+            <!-- Botón para enviar -->
             <tr>
                 <td colspan="2" style="text-align: center;">
                     <input type="submit" value="Enviar">

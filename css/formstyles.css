@@ -1,42 +1,73 @@
-body{
-    background-color: rgba(18, 180, 202, 0.555); /*color de fondo del cuerpo*/
+/* Estilo general del cuerpo */
+body {
+    background-color: white; /* color de fondo */
+    font-family: Arial, sans-serif; /* tipografía para consistencia */
+    color: #333; /* color del texto */
 }
+
+/* Estilo de la tabla */
 table {
-    height: 700px; /*La tabla ocupa 900 pixeles de alto*/
-    width: 800px; /* La tabla ocupa 800 pixeles de ancho*/
-    border-collapse: collapse; /* Elimina los bordes duplicados */
-    background-color: rgba(189, 189, 189, 0.836); /*color de fondo*/
-    color: rgb(17, 17, 17); /*color de letras*/
-    margin: auto; /*centrar la tabla equiparando sus margenes*/
-    margin-top: 20px; /*espacio en el margen superior*/
-    margin-bottom: 20px; /*espacio en el margen inferior*/
-    box-shadow: 2px 5px 30px rgb(255, 255, 255); /*sombra de la tabla*/
+    width: 750px; /* Ancho de la tabla ajustado */
+    margin: 20px auto; /* Centrando la tabla */
+    border-collapse: collapse; /* Elimina bordes duplicados */
+    background-color: #f9f9f9; /* Color de fondo de la tabla */
+    color: #333; /* Color de letras */
+    box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.1); /* Sombra ligera */
 }
-table, th, td { /*agrupa los distintos grupos con una coma*/
-    border: 1px solid #eef; /* Borde negro para la tabla y celdas */
+
+/* Bordes y alineación de celdas */
+table, th, td { /* Agrupa elementos de la tabla */
+    border: 1px solid #ddd; /* Borde de celdas */
 }
-td:first-child{
-    width: 400px; /*se refiere al primer hijo de la tabla  */
+
+td:first-child {
+    width: 50%; /* Ajusta el ancho de la primera celda */
 }
-td:last-child{
-    width: 400px; /*se refiere al ultimo hijo de la tabla */
+td:last-child {
+    width: 50%; /* Ajusta el ancho de la última celda */
 }
-th, td {
-    margin: 5px;
-    padding: 10px; /* Espaciado interno en celdas */
-    text-align: left; /* Alineación del texto al centro */
-}
-::placeholder{
-    color: rgba(58, 57, 57, 0.692);
-}
+
 th {
-    text-align: center; /* Alineación del texto en encabezados al centro */
-    font-family: 'Times New Roman', Times, serif /*tipografia*/
+    background-color: #0073e6; /* Fondo del encabezado */
+    color: white; /* Color de texto en encabezados */
+    padding: 12px; /* Espaciado interno en encabezados */
+    text-align: center; /* Alineación del texto */
+    font-family: 'Times New Roman', Times, serif; /* Tipografía original */
 }
+
+td {
+    padding: 10px; /* Espaciado interno en celdas */
+    text-align: left; /* Alineación del texto */
+}
+
+/* Estilo de los marcadores de posición */
+::placeholder {
+    color: rgba(58, 57, 57, 0.692); /* Color del marcador de posición */
+}
+
+/* Ocultar el campo "Otro medio" por defecto */
 #otroMedio {
-    display: none; /* Ocultar el campo "Otro medio" por defecto */
+    display: none;
 }
-h1{
-    font-size: 20px; /*tamaño de la letra*/
-    font-family: Georgia, 'Times New Roman', Times, serif; /*tipografia*/
+
+/* Título */
+h1 {
+    font-size: 20px; /* Tamaño de la letra */
+    font-family: Georgia, 'Times New Roman', Times, serif; /* Tipografía */
+}
+
+/* Estilos del botón de enviar */
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #0073e6; /* Fondo del botón */
+    color: white; /* Color del texto */
+    border: none; /* Sin bordes */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor */
+    font-weight: bold; /* Negrita en el texto */
+}
+
+/* Efecto hover en el botón de enviar */
+input[type="submit"]:hover {
+    background-color: #005bb5; /* Color más oscuro al pasar el cursor */
 }
