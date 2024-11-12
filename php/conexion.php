@@ -1,8 +1,8 @@
 <?php
 $host = 'localhost'; //
 $dbname = 'BDD_ELECMIR'; // Nombre de la base de datos
-$username = 'danitom89'; //
-$password = '1234'; //
+$username = 'root'; //
+$password = ''; //
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
