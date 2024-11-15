@@ -17,7 +17,7 @@ document.getElementById('categorias').addEventListener('change', function() {
     }
 });
 
-// Función para cargar productos desde productos.php
+// Función para cargar productos desde "productos.php"
 async function cargarProductos() {
     try {
         const response = await fetch('php/productos.php');
