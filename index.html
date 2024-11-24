@@ -23,25 +23,35 @@
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item"><a class="nav-link" href="#" onclick="location.reload();">Inicio</a></li>
                         <li class="nav-item"><a class="nav-link" href="paginas/contacto.html">Contacto</a></li>
-                        <li class="nav-item"><a href="paginas/login.html">Iniciar Sesion / Registrarse</a></li>
+                        <li class="nav-item"><a href="paginas/login.html">Iniciar Sesión / Registrarse</a></li>
                         <li class="nav-item"><a href="paginas/formulario.html">ENCUESTA</a></li>
                     </ul>
                     <!-- Selección de categorías -->
                     <select class="form-select" name="categorias" id="categorias">
-                        <option value="categorias">CATEGORIAS</option>
+                        <option value="categorias">CATEGORÍAS</option>
                         <option value="Celulares">CELULARES</option>
                         <option value="Computadoras">COMPUTADORAS</option>
                         <option value="Consolas">CONSOLAS</option>
                         <option value="Televisores">SMART-TV</option>
-                        <option value="Climatización">CLIMATIZACION</option>
+                        <option value="Climatización">CLIMATIZACIÓN</option>
                         <option value="Cocina">COCINA</option>
                         <option value="Heladeras">HELADERAS Y FREEZERS</option>
                     </select> 
-                </div>
+                    <!-- Contenedor del carrito -->
+        <div id="carrito" class="carrito">
+                <button id="mostrar-carrito">🛒 Carrito</button>
+            <!-- Contenido del carrito -->
+            <div id="contenido-carrito" class="contenido-carrito hidden">
+                <p id="mensaje-vacio">Tu carrito está vacío</p>
+                <ul id="lista-carrito">
+                <!-- Los productos se agregarán aquí dinámicamente --></ul>
+                <!-- Botón de continuar compra fuera de la lista -->
+                <button id="continuar-compra" class="btn-continuar-compra">Continuar Compra</button>
+        </div>
             </nav>
         </div>
     </header>
-    <!-- Fin del encabezado -->
+        <!-- Fin del encabezado -->
     
     <!-- Inicio del contenido principal -->
     <main>
@@ -208,6 +218,15 @@
     
     <!-- Archivo de Javascript -->
     <script src="./js/indexscripts.js"></script>
+    
+    <!-- probando script de carrito -->
+    <script>
+        document.getElementById('mostrar-carrito').addEventListener('click', () => {
+            console.log('Clic detectado');
+            document.getElementById('contenido-carrito').classList.toggle('hidden');
+        });
+    </script>
+    
 
 </body>
 </html>

@@ -3,8 +3,8 @@ document.getElementById('categorias').addEventListener('change', function() {
     const selectedValue = this.value; // Obtiene el valor de la opción seleccionada
 
     // Selecciona todas las secciones de categorías dentro de main, excluyendo el slider-box
-    const sections = document.querySelectorAll('main > section:not(#slider-box)'); 
-    sections.forEach(section => section.classList.add('hidden')); // Oculta todas las secciones excepto el slider-box
+    const sections = document.querySelectorAll('main > section:not(#slider-box)');
+    sections.forEach(section => section.classList.add('hidden')); // Oculta todas las secciones excepto el slider
 
     if (selectedValue === 'categorias') {
         document.getElementById('productos').classList.remove('hidden'); // Muestra la sección de productos destacados
@@ -22,7 +22,7 @@ async function cargarProductos() {
     try {
         const response = await fetch('php/productos.php');
         const productos = await response.json();
-        console.log("Productos cargados:", productos); // Verificar en la consola
+        console.log("Productos cargados desde productos.php:", productos); // Verificar en la consola
         return productos;
     } catch (error) {
         console.error("Error al cargar los productos:", error);
@@ -36,18 +36,20 @@ async function mostrarProductosDestacados() {
     const tbody = document.querySelector('#productos tbody');
     tbody.innerHTML = '';
     productosAleatorios.forEach(producto => {
-        // Formatear el precio
+        // Formato del precio
         const precioFormateado = `$ ${parseFloat(producto.PRECIO).toFixed(2).replace('.', ',')}`;
 
         const row = document.createElement('tr');
         row.innerHTML = `
-            <td><img src="${producto.imagen}" alt="${producto.NOMBRE_PRODUCTO}" class="img-fluid"></td>
+            <td><img src="${producto.IMAGEN}" alt="${producto.NOMBRE_PRODUCTO}" class="img-fluid"></td>
             <td>${producto.NOMBRE_PRODUCTO}</td>
             <td>${precioFormateado}</td>
-            <td><button class="btn btn-primary">Añadir al Carrito</button></td>
+            <td><button class="btn btn-primary add-to-cart">Añadir al Carrito</button></td>
         `;
         tbody.appendChild(row);
     });
+
+    agregarEventosCarrito(); // Para asegurar que se asignen eventos a los botones
 }
 
 // Función para cargar y mostrar productos por categoría
@@ -61,40 +63,113 @@ async function cargarProductosPorCategoria(categoria) {
     if (!productosFiltrados.length) {
         console.warn(`No se encontraron productos para la categoría: ${categoria}`);
     }
-    console.log("Categoria:", categoria);
-    console.log("Tbody seleccionado:", tbody);
 
     tbody.innerHTML = '';
     productosFiltrados.forEach(producto => {
-        // Formatear el precio
+        // Formato del precio
         const precioFormateado = `$ ${parseFloat(producto.PRECIO).toFixed(2).replace('.', ',')}`;
 
         const row = document.createElement('tr');
         row.innerHTML = `
-            <td><img src="${producto.imagen}" alt="${producto.NOMBRE_PRODUCTO}" class="img-fluid"></td>
+            <td><img src="${producto.IMAGEN}" alt="${producto.NOMBRE_PRODUCTO}" class="img-fluid"></td>
             <td>${producto.NOMBRE_PRODUCTO}</td>
             <td>${precioFormateado}</td>
-            <td><button class="btn btn-primary">Añadir al Carrito</button></td>
+            <td><button class="btn btn-primary add-to-cart">Añadir al Carrito</button></td>
         `;
         tbody.appendChild(row);
     });
+
+    agregarEventosCarrito(); // Aseguramos que se asignen eventos a los botones
 }
 
+// Funcionalidad del carrito
+const carrito = []; // Array para almacenar los productos en el carrito
 
-// Ejecuta mostrarProductosDestacados cuando la página carga
-document.addEventListener('DOMContentLoaded', mostrarProductosDestacados);
+function agregarEventosCarrito() {
+    const botonesCarrito = document.querySelectorAll('.add-to-cart');
 
-// Función para obtener imágenes aleatorias para el slider
-function obtenerImagenesAleatorias(cantidad) {
-    const imagenesSeleccionadas = [];
-    const imagenesCopy = [...imagenesProductos]; // Copia de la lista original
+    console.log("Botones disponibles:", botonesCarrito); // Verifica si los botones existen
 
-    while (imagenesSeleccionadas.length < cantidad && imagenesCopy.length > 0) {
-        const indexAleatorio = Math.floor(Math.random() * imagenesCopy.length);
-        imagenesSeleccionadas.push(imagenesCopy.splice(indexAleatorio, 1)[0]);
+    botonesCarrito.forEach(boton => {
+        boton.addEventListener('click', (e) => {
+            console.log("Botón clic detectado"); // Depura si el clic en el botón funciona
+            const producto = e.target.closest('tr'); // Encuentra la fila del producto
+            const nombre = producto.querySelector('td:nth-child(2)').innerText;
+            const precio = producto.querySelector('td:nth-child(3)').innerText;
+            const imagen = producto.querySelector('td:nth-child(1) img').src;
+
+            console.log("Producto seleccionado:", { nombre, precio, imagen }); // Depuración: verifica datos del producto
+            agregarProductoAlCarrito({ nombre, precio, imagen });
+        });
+    });
+}
+
+function agregarProductoAlCarrito(producto) {
+    const productoExistente = carrito.find(item => item.nombre === producto.nombre);
+
+    if (productoExistente) {
+        productoExistente.cantidad += 1;
+    } else {
+        carrito.push({ ...producto, cantidad: 1 });
     }
-    return imagenesSeleccionadas;
+    
+    console.log("Producto añadido al carrito:", producto);
+    console.log("Carrito ahora:", carrito);
+    
+    // Guardar carrito en la sesión
+    sessionStorage.setItem('carrito', JSON.stringify(carrito)); // Hecho por ChatGPT: Guardamos el carrito en sessionStorage
+
+    // Ahora enviamos el carrito al servidor con AJAX
+    enviarCarritoAServidor(carrito); // Hecho por ChatGPT: Llamada AJAX para enviar el carrito al servidor
+
+    actualizarCarrito(); // Aseguramos que se actualice el carrito
 }
+
+// Enviar carrito al servidor usando AJAX
+function enviarCarritoAServidor(carrito) {
+    const xhr = new XMLHttpRequest();
+    xhr.open("POST", "guardar_carrito.php", true);
+    xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    xhr.send(JSON.stringify({ carrito: carrito })); // Hecho por ChatGPT: Enviamos el carrito al servidor
+}
+
+function actualizarCarrito() {
+    const contenidoCarrito = document.getElementById('contenido-carrito');
+    const listaCarrito = document.getElementById('lista-carrito');
+    const mensajeVacio = document.getElementById('mensaje-vacio');
+
+    // Limpiar solo la lista de productos
+    listaCarrito.innerHTML = '';
+
+    console.log("Carrito actual:", carrito);
+
+    if (carrito.length === 0) {
+        // Si el carrito está vacío, mostrar el mensaje y ocultar la lista
+        mensajeVacio.style.display = 'block';
+    } else {
+        // Si el carrito tiene productos, ocultar el mensaje vacío y mostrar la lista
+        mensajeVacio.style.display = 'none';
+        carrito.forEach(item => {
+            const li = document.createElement('li');
+            li.innerHTML = `
+                <img src="${item.IMAGEN}" alt="${item.nombre}" style="width: 50px; height: 50px;">
+                ${item.nombre} - ${item.precio} (x${item.cantidad})
+            `;
+            listaCarrito.appendChild(li);
+        });
+    }
+
+    // Asegurarse de que el botón "Continuar compra" siga estando al final
+    const botonContinuar = document.getElementById('continuar-compra');
+    if (!contenidoCarrito.contains(botonContinuar)) {
+        contenidoCarrito.appendChild(botonContinuar); // Hecho por ChatGPT: Reagregar el botón si es necesario
+    }
+}
+
+document.getElementById('continuar-compra').addEventListener('click', () => {
+    window.location.href = './php/carritodecompra.php'; // Hecho por ChatGPT: Redirige a la página de carrito de compra
+});
+
 
 // SLIDER - Lógica del slider y de sus botones de navegación
 const imagenesProductos = [
@@ -140,3 +215,18 @@ document.addEventListener('DOMContentLoaded', () => {
     botonAtras.addEventListener('click', moverAtras);
     setInterval(moverAdelante, 3000);
 });
+
+// Función para obtener imágenes aleatorias para el slider
+function obtenerImagenesAleatorias(cantidad) {
+    const imagenesSeleccionadas = [];
+    const imagenesCopy = [...imagenesProductos]; // Copia de la lista original
+
+    while (imagenesSeleccionadas.length < cantidad && imagenesCopy.length > 0) {
+        const indexAleatorio = Math.floor(Math.random() * imagenesCopy.length);
+        imagenesSeleccionadas.push(imagenesCopy.splice(indexAleatorio, 1)[0]);
+    }
+    return imagenesSeleccionadas;
+}
+
+// Ejecuta mostrarProductosDestacados cuando la página carga
+document.addEventListener('DOMContentLoaded', mostrarProductosDestacados);

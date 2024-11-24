@@ -189,5 +189,116 @@ footer {
     right: 0;
 }
 
-/* Comentar el siguiente estilo para asegurarse de que las secciones se muestren correctamente */
-/* .hidden { display: none; } */
+/* Comentario: Asegurarse de que las secciones se muestren correctamente eliminando la clase hidden si se aplica al slider */
+/* .hidden { display: none; } */ /* Opcional borrar: Esta línea puede eliminarse si no la necesitas para las secciones del slider */
+
+/* Contenedor del carrito */
+.carrito {
+    position: absolute; /* Esto asegura que se posicione en la esquina superior derecha */
+    top: 20px; /* Ajusta el valor para que se vea en el lugar correcto */
+    right: 20px; /* Empuja el carrito hacia la derecha */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+}
+
+/* Estilo del botón del carrito */
+#mostrar-carrito {
+    background-color: #0073e6 !important;
+    color: white !important;
+    border: none !important;
+    padding: 10px !important;
+    border-radius: 5px !important;
+    cursor: pointer !important;
+    font-size: 16px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 5px !important;
+}
+
+/* Estilo del carrito al pasar el ratón sobre el botón */
+#mostrar-carrito:hover {
+    background-color: #005bb5 !important;
+}
+
+/* Contenido desplegable del carrito */
+.contenido-carrito {
+    position: absolute !important;
+    top: 40px !important; /* Espacio debajo del botón */
+    right: 0 !important;
+    width: 300px !important;
+    background-color: white !important;
+    border: 1px solid #ccc !important;
+    border-radius: 5px !important;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1) !important;
+    padding: 10px !important;
+    z-index: 1000 !important;
+    max-height: 400px !important;
+    overflow-y: auto !important; /* Añadir barra de desplazamiento si el contenido es muy grande */
+    color: #333 !important; /* Aseguramos que el texto sea visible */
+}
+
+/* Asegurando que el texto dentro del carrito sea legible */
+.contenido-carrito p {
+    text-align: left !important;
+    color: #333 !important; /* Cambié el color a un gris oscuro para mejor contraste */
+    margin: 10px 0 !important;
+}
+
+/* Cada producto en el carrito */
+.contenido-carrito ul {
+    padding: 0 !important;
+    list-style: none !important;
+    display: flex !important;
+    flex-direction: column !important; /* Asegura que los productos estén uno debajo del otro */
+    gap: 10px !important; /* Espacio entre los productos */
+}
+
+.contenido-carrito li {
+    display: flex !important;
+    flex-direction: row !important; /* Los elementos dentro del carrito estarán en fila */
+    align-items: center !important;
+    justify-content: space-between !important; /* Alinea los elementos */
+    padding: 5px 0 !important;
+    border-bottom: 1px solid #ccc !important;
+}
+
+.contenido-carrito li img {
+    width: 50px !important; /* Tamaño de la imagen */
+    height: 50px !important;
+    object-fit: cover !important;
+    margin-right: 10px !important;
+}
+
+.contenido-carrito li span {
+    flex-grow: 1 !important; /* Asegura que el nombre y precio se alineen bien */
+}
+
+.contenido-carrito li .cantidad {
+    font-size: 12px !important;
+    color: #888 !important;
+}
+
+/* Ocultar el contenido del carrito */
+.hidden {
+    display: none !important;
+}
+
+/* Estilo para el botón de continuar compra */
+#continuar-compra {
+    background-color: #28a745 !important; /* Color verde */
+    color: white !important;
+    border: none !important;
+    padding: 10px 20px !important;
+    border-radius: 5px !important;
+    cursor: pointer !important;
+    font-size: 16px !important;
+    width: 100% !important; /* Ocupa todo el ancho */
+    margin-top: 10px !important;
+    display: block !important; /* Asegura que el botón esté en bloque */
+}
+
+#continuar-compra:hover {
+    background-color: #218838 !important; /* Color verde oscuro en hover */
+}

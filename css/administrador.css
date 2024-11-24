@@ -1,0 +1,87 @@
+/* Estilo general */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: #333;
+}
+
+/* Contenedor principal */
+main {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 750px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos */
+h1, h2 {
+    text-align: center;
+    color: #0073e6;
+    margin-bottom: 20px;
+}
+
+/* Tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+table th, table td {
+    border: 1px solid black;
+    padding: 12px;
+    text-align: center;
+}
+table th {
+    background-color: #0073e6;
+    color: white;
+}
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+table tr:hover {
+    background-color: #e1f5fe;
+}
+
+/* Botones */
+button {
+    padding: 10px 20px;
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+button:hover {
+    background-color: #005bb5;
+}
+
+/* Formularios */
+form input, form select, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+form input:focus, form select:focus, form textarea:focus {
+    border-color: #0073e6;
+    outline: none;
+}
+
+/* Pie de página del panel */
+footer {
+    margin-top: 20px;
+    text-align: center;
+    color: #777;
+    font-size: 12px;
+}
