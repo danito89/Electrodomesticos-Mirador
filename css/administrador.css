@@ -11,33 +11,51 @@ body {
 }
 
 /* Contenedor principal */
-main {
+.contenedor {
     padding: 20px;
     margin: 20px auto;
-    max-width: 750px;
-    background-color: white;
+    max-width: 95%; /* Ajusta el ancho máximo dinámicamente */
+    background-color: #f9f9f9;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Títulos */
-h1, h2 {
-    text-align: center;
-    color: #0073e6;
+/* Mensajes */
+.mensaje {
+    padding: 10px;
     margin-bottom: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+.mensaje-exito {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+.mensaje-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+.mensaje-desconocido {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
 }
 
 /* Tablas */
 table {
-    width: 100%;
+    width: 100%; /* La tabla ocupará todo el ancho disponible del contenedor */
+    max-width: 95%; /* Establece un ancho máximo para la tabla */
+    margin: 0 auto; /* Centra la tabla horizontalmente */
     border-collapse: collapse;
-    margin: 20px 0;
 }
 table th, table td {
     border: 1px solid black;
     padding: 12px;
     text-align: center;
+    word-wrap: break-word; /* Ajusta texto largo */
 }
 table th {
     background-color: #0073e6;
@@ -76,12 +94,4 @@ form input, form select, form textarea {
 form input:focus, form select:focus, form textarea:focus {
     border-color: #0073e6;
     outline: none;
-}
-
-/* Pie de página del panel */
-footer {
-    margin-top: 20px;
-    text-align: center;
-    color: #777;
-    font-size: 12px;
 }
