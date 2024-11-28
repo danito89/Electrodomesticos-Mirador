@@ -9,12 +9,10 @@
 <body>
     <!-- Header -->
     <header>
-        <h1>Tu Tienda en Línea</h1>
+        <h1>Electrodomesticos Mirador</h1>
         <nav>
             <ul>
-                <li><a href="index.php">Inicio</a></li>
-                <li><a href="productos.php">Productos</a></li>
-                <li><a href="carrito.php">Carrito</a></li>
+                <li><a href="../index.html">Inicio</a></li>
             </ul>
         </nav>
     </header>
@@ -24,6 +22,7 @@
         <!-- Carrito Section -->
         <section id="carrito">
             <h2>Carrito de Compras</h2>
+            <!-- Integración del código PHP -->
             <?php
             session_start();  // Iniciar la sesión
 
@@ -46,60 +45,87 @@
                             <td>{$producto['precio']}</td>
                             <td>{$producto['cantidad']}</td>
                             <td>" . $producto['precio'] * $producto['cantidad'] . "</td>
-                          </tr>";
+                    </tr>";
                 }
                 echo "</table>";
                 echo "<p>Total: $total</p>";
             }
             ?>
+
+<!-- Carrito dinámico -->
+<div id="contenido-carrito">
+    <ul id="lista-carrito">
+        <!-- Los productos del carrito se agregarán aquí dinámicamente -->
+    </ul>
+    <p id="mensaje-vacio" style="display: none;">Tu carrito está vacío</p> <!-- Mensaje de carrito vacío -->
+    <?php
+    // Detectar el nombre del archivo actual
+    $currentPage = basename($_SERVER['PHP_SELF']);
+    // Mostrar el botón solo si no estás en 'carritodecompra.php'
+    if ($currentPage !== 'carritodecompra.php') {
+        echo '<button id="continuar-compra">Continuar Compra</button>';
+    }
+    ?>
+</div>
         </section>
 
         <!-- Opciones de Pago Section -->
         <section id="opciones-pago">
             <h3>Opciones de Pago</h3>
-            <form id="form-pago">
-                <label for="pago">Elige un método de pago:</label><br>
-                <input type="radio" name="pago" value="Tarjeta de crédito" id="tarjeta"> Tarjeta de crédito<br>
-                <input type="radio" name="pago" value="PayPal" id="paypal"> PayPal<br>
-                <input type="radio" name="pago" value="Transferencia bancaria" id="transferencia"> Transferencia bancaria<br><br>
-                <button type="button" id="btn-pago">Realizar Pago</button>
-            </form>
-            <p id="mensaje-pago" style="display: none; color: green; font-weight: bold;"></p>
+            <?php
+            // Formulario generado dinámicamente con PHP
+            echo '<form action="procesar_pago.php" method="POST">
+                    <label for="pago">Elige un método de pago:</label><br>
+                    <input type="radio" name="pago" value="tarjeta" id="tarjeta"> Tarjeta de crédito<br>
+                    <input type="radio" name="pago" value="MercadoPago" id="MercadoPago"> Mercado Pago<br>
+                    <input type="radio" name="pago" value="transferencia" id="transferencia"> Transferencia bancaria<br><br>
+                    <input type="submit" value="Realizar pago">
+                </form>';
+            ?>
         </section>
     </main>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Tu Tienda en Línea. Todos los derechos reservados.</p>
+        <p>&copy; 2024 Electrodomesticos Mirador. Todos los derechos reservados.</p>
     </footer>
 
     <!-- Scripts -->
     <script>
-        // Capturar el botón y los inputs del formulario
-        const botonPago = document.getElementById('btn-pago');
-        const opcionesPago = document.getElementsByName('pago');
+        // Recuperar el carrito del sessionStorage
+        const carrito = JSON.parse(sessionStorage.getItem('carrito')) || []; // Si no hay carrito, devuelve un array vacío
 
-        // Agregar evento al botón de pago
-        botonPago.addEventListener('click', () => {
-            let seleccion = '';
+        // Función para mostrar los productos en el carrito
+        function mostrarCarrito() {
+            const listaCarrito = document.getElementById('lista-carrito'); // Lista dinámica
+            const mensajeVacio = document.getElementById('mensaje-vacio'); // Mensaje de carrito vacío
 
-            // Verificar cuál opción está seleccionada
-            opcionesPago.forEach(opcion => {
-                if (opcion.checked) {
-                    seleccion = opcion.value; // Obtener el valor de la opción seleccionada
-                }
-            });
+            // Limpiar la lista antes de agregar los productos
+            listaCarrito.innerHTML = '';
 
-            if (seleccion) {
-                // Mostrar mensaje con la opción seleccionada
-                alert(`Usted seleccionó: ${seleccion}`);
+            if (carrito.length === 0) {
+                mensajeVacio.style.display = 'block'; // Muestra mensaje vacío si no hay productos
             } else {
-                // Mostrar alerta si no se seleccionó ninguna opción
-                alert('Por favor, seleccione un método de pago.');
+                mensajeVacio.style.display = 'none'; // Oculta el mensaje vacío si hay productos
+                // Agregar cada producto a la lista
+                carrito.forEach(item => {
+                    const li = document.createElement('li');
+                    li.innerHTML = `
+                        <img src="${item.imagen}" alt="${item.nombre}" style="width: 50px; height: 50px;">
+                        ${item.nombre} - ${item.precio} (x${item.cantidad})
+                    `;
+                    listaCarrito.appendChild(li);
+                });
             }
+        }
+
+        // Llamar a la función para mostrar los productos cuando la página se carga
+        mostrarCarrito();
+
+        // Evento para el botón de "Continuar Compra"
+        document.getElementById('continuar-compra').addEventListener('click', () => {
+            window.location.href = './php/carritodecompra.php'; // Redirige a la página de carrito de compra
         });
     </script>
 </body>
 </html>
-
-
