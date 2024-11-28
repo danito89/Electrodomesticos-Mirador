@@ -52,28 +52,19 @@
                 echo "<p>Total: $total</p>";
             }
             ?>
-
-            <div id="contenido-carrito">
-                <ul id="lista-carrito">
-                    <!-- Los productos del carrito se agregarán aquí dinámicamente -->
-                </ul>
-                <button id="continuar-compra">Continuar Compra</button>
-            </div>
         </section>
 
         <!-- Opciones de Pago Section -->
         <section id="opciones-pago">
             <h3>Opciones de Pago</h3>
-            <?php
-            // Formulario generado dinámicamente con PHP
-            echo '<form action="procesar_pago.php" method="POST">
-                    <label for="pago">Elige un método de pago:</label><br>
-                    <input type="radio" name="pago" value="tarjeta" id="tarjeta"> Tarjeta de crédito<br>
-                    <input type="radio" name="pago" value="paypal" id="paypal"> PayPal<br>
-                    <input type="radio" name="pago" value="transferencia" id="transferencia"> Transferencia bancaria<br><br>
-                    <input type="submit" value="Realizar pago">
-                </form>';
-            ?>
+            <form id="form-pago">
+                <label for="pago">Elige un método de pago:</label><br>
+                <input type="radio" name="pago" value="Tarjeta de crédito" id="tarjeta"> Tarjeta de crédito<br>
+                <input type="radio" name="pago" value="PayPal" id="paypal"> PayPal<br>
+                <input type="radio" name="pago" value="Transferencia bancaria" id="transferencia"> Transferencia bancaria<br><br>
+                <button type="button" id="btn-pago">Realizar Pago</button>
+            </form>
+            <p id="mensaje-pago" style="display: none; color: green; font-weight: bold;"></p>
         </section>
     </main>
 
@@ -84,39 +75,31 @@
 
     <!-- Scripts -->
     <script>
-        // Recuperar el carrito del sessionStorage
-        const carrito = JSON.parse(sessionStorage.getItem('carrito')) || [];
+        // Capturar el botón y los inputs del formulario
+        const botonPago = document.getElementById('btn-pago');
+        const opcionesPago = document.getElementsByName('pago');
 
-        // Mostrar productos del carrito dinámicamente
-        function mostrarCarrito() {
-            const listaCarrito = document.getElementById('lista-carrito');
-            const mensajeVacio = document.getElementById('mensaje-vacio');
+        // Agregar evento al botón de pago
+        botonPago.addEventListener('click', () => {
+            let seleccion = '';
 
-            listaCarrito.innerHTML = '';
+            // Verificar cuál opción está seleccionada
+            opcionesPago.forEach(opcion => {
+                if (opcion.checked) {
+                    seleccion = opcion.value; // Obtener el valor de la opción seleccionada
+                }
+            });
 
-            if (carrito.length === 0) {
-                mensajeVacio.style.display = 'block';
+            if (seleccion) {
+                // Mostrar mensaje con la opción seleccionada
+                alert(`Usted seleccionó: ${seleccion}`);
             } else {
-                mensajeVacio.style.display = 'none';
-                carrito.forEach(item => {
-                    const li = document.createElement('li');
-                    li.innerHTML = `
-                        <img src="${item.imagen}" alt="${item.nombre}" style="width: 50px; height: 50px;">
-                        ${item.nombre} - ${item.precio} (x${item.cantidad})
-                    `;
-                    listaCarrito.appendChild(li);
-                });
+                // Mostrar alerta si no se seleccionó ninguna opción
+                alert('Por favor, seleccione un método de pago.');
             }
-        }
-
-        // Llamar a la función al cargar la página
-        mostrarCarrito();
-
-        // Redirección al continuar compra
-        document.getElementById('continuar-compra').addEventListener('click', () => {
-            window.location.href = './php/carritodecompra.php';
         });
     </script>
 </body>
 </html>
+
 
